@@ -1,3 +1,3 @@
 # medical-doctor-finder
 
-![Alt text](teachers-requirements.png?raw=True "Teacher's requirements")
+![Alt text](/resources/readme/teachers-requirements.png?raw=True "Teacher's requirements")
