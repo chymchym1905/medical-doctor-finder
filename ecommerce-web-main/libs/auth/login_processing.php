@@ -29,7 +29,7 @@ if(isset($_POST['user_name']) && isset($_POST['password']))  {
 
         if ($user_level == 'User') {
             # Database Query (SQL)
-            $sql = "SELECT * FROM user WHERE username='$user_name' LIMIT 1";
+            $sql = "SELECT * FROM patient WHERE username='$user_name' LIMIT 1";
         }
         else if ($user_level == 'Staff') {
             # Database Query (SQL)

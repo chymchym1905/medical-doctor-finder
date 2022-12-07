@@ -1,6 +1,6 @@
 var input = document.getElementById("myInput");
 
-// Execute a function when the user releases a key on the keyboard
+// Execute a function when the patient releases a key on the keyboard
 input.addEventListener("keyup", function(event) {
   // Number 13 is the "Enter" key on the keyboard
   if (event.keyCode === 13) {

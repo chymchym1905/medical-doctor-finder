@@ -29,7 +29,7 @@ include "../db_conn.php";
 
         else {
             $user_level = (isset($_POST['user_level']) && $_POST['user_level'] == 'on') ? "Artist" : "User";
-            $sql = "SELECT * FROM user WHERE username='$user_name' LIMIT 1";
+            $sql = "SELECT * FROM patient WHERE username='$user_name' LIMIT 1";
 
             $result = mysqli_query($conn, $sql);
     
@@ -44,7 +44,7 @@ include "../db_conn.php";
             if (mysqli_num_rows($result) == 0){
                 $password_hash = password_hash($password, PASSWORD_BCRYPT);
     
-                $sql_insert = "INSERT INTO user (username, password, firstname, lastname, dob, created_at)
+                $sql_insert = "INSERT INTO patient (username, password, firstname, lastname, dob, created_at)
                 VALUES ('$user_name', '$password_hash', '$first_name', '$last_name', '$dob', date('Y-m-d H:i:s'))";
     
                 if (mysqli_query($conn, $sql_insert)) {

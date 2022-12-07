@@ -446,7 +446,7 @@ INSERT INTO `staff` (`id`, `username`, `password`, `firstname`, `lastname`, `cre
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `patient`
 --
 
 CREATE TABLE `user` (
@@ -462,7 +462,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `patient`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `firstname`, `lastname`, `address`, `telephone`, `dob`, `created_at`) VALUES
@@ -535,7 +535,7 @@ ALTER TABLE `staff`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Indexes for table `patient`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
@@ -587,7 +587,7 @@ ALTER TABLE `shopping_session`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

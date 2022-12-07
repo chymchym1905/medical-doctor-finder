@@ -20,7 +20,7 @@
     $user_3_pass = password_hash("nat18021998", PASSWORD_BCRYPT);  
 
     // Insert data SQL
-    $sql_insert = "INSERT INTO user (username, password, firstname, lastname, address, telephone, dob, created_at)
+    $sql_insert = "INSERT INTO patient (username, password, firstname, lastname, address, telephone, dob, created_at)
                     VALUES ('jason123@gmail.com', '$user_1_pass', 'Jason', 'Nguyen', '5 Ham Nghi, District 1', '0931251260', '2000-03-09','2021-01-25'),
                             ('duycse2k@gmail.com', '$user_2_pass', 'Duy', 'Nguyen Vinh', '106 Lexington, New York City', '0903591012', '1998-07-23', '2021-05-03'),
                             ('nataliedang@gmail.com', '$user_3_pass', 'Natalie', 'Dang', '206 Ly Thuong Kiet, District 10', '0938120677', '1999-01-31', '2021-07-04');";
