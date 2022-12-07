@@ -49,6 +49,8 @@ if (isset($_GET['page'])) {
         include 'views/logout.php';
     } elseif ($page == 'about') {
         include 'views/about.php';
+    } elseif ($page == 'doctors') {
+        include 'views/doctor-list.php';
     } elseif ($page == 'contact') {
     } else {
         //include 'views/register.php';

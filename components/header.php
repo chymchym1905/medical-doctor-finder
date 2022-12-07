@@ -14,7 +14,7 @@
                         <a href="./index.php?page=about" class="nav-link" >About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="./index.php?page=doctor" class="nav-link" >Doctors</a>
+                        <a href="./index.php?page=doctors" class="nav-link" >Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a href="./index.php?page=medical-facilities" class="nav-link">Medical Facilities</a>
@@ -22,11 +22,11 @@
                 </ul>
             </div>
             <div class="nav-bar margin-auto">
-                <form action="" method="post">
+                <form action="?page=doctors" method="post">
                     <div class= "input-icons">
                         <i class="icon"></i>
                         <input style="width: 20vw;" type="search" class="search-input"
-                               type="text" placeholder = "Search...">
+                               type="text" placeholder = "Search..." name="search">
                     </div>
                 </form>
             </div>

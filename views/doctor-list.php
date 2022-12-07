@@ -1,3 +1,11 @@
+<?php
+#session_start();
+require('libs/cards_display.php');
+require('libs/database/databaseimplement.php');
+
+$database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,9 +35,25 @@
 
 <body>
 <?php include 'components/header.php'; ?>
-<div>
-    Doctor List
-</div>
+<div class="container-fluid">
+    <div class="row text-center py-5">
+        <?php
+            if(empty($_POST["search"])){
+            $result = $database->getAllDoctors();
+            while ($row = mysqli_fetch_assoc($result)){
+                card($row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_desc']);
+            }
+            } else{
+            $result = $database->searchData($_POST["search"]);
+            while ($row = mysqli_fetch_assoc($result)){
+                card($row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_desc']);
+            }
+            }
+            
+            
+        ?>
+    </div>
+</div> 
 <?php include 'components/footer.php'; ?>
 </body>
 </html>
