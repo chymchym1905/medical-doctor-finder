@@ -134,7 +134,7 @@
 
 
                 </div>
-                <div class="form-field">
+                <div class="form-field"> 
                     <select name ="speciality" class="dept">
                         <option value="tat-ca-chuyen-khoa">Department</option>
                             <option value="Nhi" >Nhi</option>
@@ -172,6 +172,10 @@
                             <option value="tam-ly" >T&acirc;m L&yacute;</option>
                             </select>
                 </div>
+
+                <!-- ĐỔI TOÀN BỘ VALUE CHỖ NÀY THÀNH TIẾNG VIỆT SAO CHO KHỚP DATABASE -->
+                <!-- ĐỔI TOÀN BỘ VALUE CHỖ NÀY THÀNH TIẾNG VIỆT SAO CHO KHỚP DATABASE -->
+                <!-- ĐỔI TOÀN BỘ VALUE CHỖ NÀY THÀNH TIẾNG VIỆT SAO CHO KHỚP DATABASE -->
 
                 <div class = "button-custom">
                     <button type="submit" name="filter" class="but ">Filter</button>
