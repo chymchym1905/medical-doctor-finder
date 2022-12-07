@@ -1,0 +1,95 @@
+.form-inline {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-inline-start: 10rem;
+    margin-right: 1.5rem;
+
+}
+
+.form-field {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+    margin-inline: 0.5rem;
+}
+
+
+
+.form-field select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #848991;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0.6;
+    height: 40px;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button;
+}
+
+button.but {
+    margin: 0;
+    padding: 0 15px;
+    width: auto;
+    border: 0;
+    color: #fff;
+    background: #06afe3;
+}
+
+.but {
+    height: 40px;
+    width: 100px;
+    display: inline-block;
+    background-color: #2B96CC;
+    color: #fff;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .form-field {
+        width: 30%;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .form-field select {
+        float: left;
+    }
+}
+
+@font-face {
+    font-family: "Inter Medium";
+    src: url("../fonts/static/Inter-Black.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("../fonts/static/Inter-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Inter Thin";
+    src: url("../fonts/static/Inter-Thin.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("../fonts/static/Inter-Bold.ttf") format("opentype");
+}

@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a:link {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+
+.navbar-expand {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+}
+
+nav {
+    display: block;
+}
+
+.bg {
+    background-color: rgba(238, 227, 227, 0.893) !important;
+}
+
+.text-bg {
+    color: rgb(0, 0, 0);
+
+}
+
+.navbar-collapse {
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-expand .navbar-collapse {
+    display: flex !important;
+}
+
+
+.navbar .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.nav-item {
+    outline: none;
+}
+
+.nav-link {
+    display: block;
+    color: black;
+    padding: 1rem 1rem;
+    text-decoration: none;
+    transition: gray .15s ease-in-out;
+    font-family: 'Inter Regular';
+}
+
+.navbar-icon {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+.align-top {
+    vertical-align: top !important;
+}
+
+.margin-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.search-input {
+    font-family: "Inter Regular";
+    width: 100%;
+    padding: 12px 24px;
+    background-color: white;
+    font-size: 14px;
+    line-height: 16px;
+    color: #575756;
+    background: transparent url("../img/search-icon.jpg") no-repeat right;
+    background-size: 25px;
+    border-radius: 25px;
+    border: 0.25px solid black;
+    margin-top: 10px;
+}
+
+.icon {
+    padding: 10px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-icons i {
+    position: absolute;
+}
+
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.button-log {
+    position: relative;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    padding: 0 1.25rem;
+    line-height: 2.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0.125rem;
+    border-radius: 0.125rem;
+    border: 2px solid #3F4C5C;
+    background-color: #3F4C5C;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.125s ease;
+    overflow: hidden;
+    cursor: pointer;
+    vertical-align: middle;
+    outline: none;
+}
+
+
+
+.button-log.blue {
+    background-color: #4793FF;
+    border-color: #4793FF;
+    color: #FFFFFF;
+}
+
+.search-frame-bg {
+    position: relative;
+    background-image: url("../img/family.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+
+}
+
+.centering {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 50%;
+
+}
+
+.search {
+    position: relative;
+    height: inherit;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.1));
+    padding: 45px 0;
+    color: #333;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search-frame-bg .search {
+    justify-content: center;
+    text-align: center;
+    display: block;
+
+
+
+}
+
+.search-header {
+    font-family: "Inter Regular";
+    font-size: 64px;
+    display: block;
+    color: white;
+    margin-top: 10rem;
+
+
+}
+
+.main-search-bar {
+    font-family: "Inter Regular";
+    width: 100%;
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 14px;
+    line-height: 16px;
+    color: black;
+    background: white url("../img/search-icon.jpg") no-repeat right;
+    background-size: 25px;
+    border-radius: 25px;
+    border: 0.25px solid black;
+    margin-top: 10px;
+
+}
+
+.button-custom {
+    nav-left: auto;
+    margin-inline-start: 48%;
+    margin-top: 15px;
+}
+
+
+button.but {
+    margin: 0;
+    padding: 0 15px;
+    width: auto;
+    border: 0;
+    color: #fff;
+    background: #06afe3;
+}
+
+.but {
+    height: 40px;
+    width: 100px;
+    border-radius: 3px;
+    display: inline-block;
+    left: 45%;
+    background-color: #2B96CC;
+    color: #fff;
+    text-align: center;
+}
+
+.search-filter {
+    position: relative;
+
+}
+
+.search-filter-header {
+    font-family: 'Inter Bold';
+    Color: rgba(44, 44, 218, 0.729);
+
+}
+
+.search-filter .search-filter-header {
+    text-align: center;
+}
+
+
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(1, 1, 1);
+    opacity: 1;
+    /* Firefox */
+}
+
+footer * {
+    font-size: .9rem;
+    color: #ffffff;
+}
+
+#copyright {
+    font-size: medium;
+    color: black;
+    float: right;
+
+}
+
+#copyright * {
+    font-size: medium;
+    color: black;
+    float: right;
+}
+
+@font-face {
+    font-family: "Inter Medium";
+    src: url("../fonts/static/Inter-Black.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Inter Regular";
+    src: url("../fonts/static/Inter-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Inter Thin";
+    src: url("../fonts/static/Inter-Thin.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url("../fonts/static/Inter-Bold.ttf") format("opentype");
+}
