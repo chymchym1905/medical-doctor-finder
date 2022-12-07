@@ -1,8 +1,8 @@
-<div class="">
+<div class="header">
     <nav class="navbar fix-top navbar-expand-sm">
         <div id="header" class="container-fluid">
             <a class="navbar-brand" href="./index.php">
-                <img src="./assets/img/logo.png" alt="Medical Doctor Finder Logo" width="50" class="d-inline-block align-top">
+                <img src="./assets/img/logo.png" alt="Medical Doctor Finder Logo" width="100" class="d-inline-block align-top">
             </a>
 
             <div class="collapse navbar-collapse" id="collapsibleNavbar">

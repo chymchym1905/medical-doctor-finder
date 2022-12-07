@@ -72,7 +72,6 @@ div {
 .header {
     position: relative;
     display: flex;
-    color: #ffffff;
     background-color: var(--color-2);
     padding: 1em 1em 1vh;
     justify-content: center;
@@ -136,10 +135,26 @@ div {
     flex-shrink: 0;
 }
 
+.footer-bg {
+    background-color: var(--color-1);
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.footer-about {
+    background-color: var(--color-1);
+    width: 100%;
+    padding-top: 1em;
+    margin: 0;
+}
+
 .footer-copyright{
-    color: white;
     text-align: left;
     margin-top: 3%;
     padding-bottom: 1%;
     padding-left: 3%;
+}
+
+#copyright h6 {
+    color: var(--color-3);
 }

@@ -26,7 +26,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Google maps -->
-    <script src = "https://maps.googleapis.com/maps/api/js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="./assets/js/maps.js"></script>
 </head>
 
 <body>
@@ -51,7 +53,6 @@ if (isset($_GET['page'])) {
         include 'views/doctor-list.php';
     } elseif ($page == 'medical-facilities') {
         include 'views/medical-facilities.php';
-    } elseif ($page == 'contact') {
     } else {
         //include 'views/register.php';
         die('Page Not Found!');

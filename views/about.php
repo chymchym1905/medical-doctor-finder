@@ -27,9 +27,14 @@
 
 <body>
 <?php include 'components/header.php'; ?>
-<div>
-    About
+
+<div class="container-fluid">
+    <div class="row text-center py-5">
+        <h1>About</h1>
+
+    </div>
 </div>
+
 <?php include 'components/footer.php'; ?>
 </body>
 </html>

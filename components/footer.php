@@ -1,7 +1,7 @@
-<footer class = "text-bg">
-    <div class="container-fluid bg">
+<footer class = "footer-bg">
+    <div class="container-fluid footer-about">
         <p class="float-end mb-1">
-            <a href="#">Back to top </a>
+            <a href="#" style="color: var(--color-3)">Back to top </a>
         </p>
         <div class="row">
             <div class="col-lg-4">
