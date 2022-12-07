@@ -31,7 +31,8 @@
             } elseif ($page == 'register_processing') {
                 include 'config/register_processing.php';
             } else {
-                include 'views/register.php';
+                //include 'views/register.php';
+                die('Page Not Found!');
             }
         } else {
             include 'views/home.php';

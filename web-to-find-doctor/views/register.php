@@ -22,7 +22,7 @@
 
 </head>
 <body>
-    <?php include '../components/header.php'; ?>
+    <?php include 'components/header.php'; ?>
 
     <div class="container content-wrap">
         <div class="row">
@@ -64,6 +64,6 @@
         </div>
     </div>
 
-    <?php include '../components/footer.php'; ?>
+    <?php include 'components/footer.php'; ?>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register Page</title>
+    <title>Login Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font -->
@@ -22,7 +22,7 @@
 
 </head>
 <body>
-<?php include '../components/header.php'; ?>
+<?php include 'components/header.php'; ?>
 
 <div class="container content-wrap">
     <div class="row">
@@ -70,6 +70,6 @@
     </div>
 </div>
 
-<?php include '../components/footer.php'; ?>
+<?php include 'components/footer.php'; ?>
 </body>
 </html>
