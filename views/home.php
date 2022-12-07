@@ -7,8 +7,8 @@
     <meta name="format-detection" content="telephone=no">
     <title></title>
 
-    <link rel="stylesheet" href="css/utils.css"/>
-    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="../assets/css/utils.css"/>
+    <link rel="stylesheet" href="../assets/css/main.css"/>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,56 +29,8 @@
 
 <body>
     <!-- Nav bar -->
-    <nav class = "navbar navbar-expand">
-        <div class="container-fluid">
-            <a href="" class = "navbar-icon"><img class = "d-inline-block align-top" src="./img/Medical-icon.jpg" 
-            alt="medical-home-icon" width = "50"></a>
-            <div class="navbar-collapse">
-                <ul class = "navbar-nav">
-                    <li class = "nav-item">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    <li class = "nav-item">
-                        <a href="about.php" class="nav-link">About</a>
-                    </li>
-                    <li class = "nav-item">
-                        <a href="Doctor List" class="nav-link">Doctors</a>
-                    </li>
-                    <li class = "nav-item">
-                        <a href="Medical-Facilities.php" class="nav-link">Medical Facilities</a>
-                    </li>
-                    
-                </ul>
-            </div>
-            <div class="nav-bar margin-auto">
-                <form action="" method="post">
-                    <div class= "input-icons">
-                        <i class="icon"></i>
-                        <input style="width: 20vw;" type="search" class="search-input" 
-                        type="text" placeholder = "Search..">
-                    </div>
-                </form>
+    <?php include "components/header.php"; ?>
 
-            </div>
-            <ul class="navbar-nav margin-auto">
-                <li class="nav-item">
-                    <a id="logout-button" href="login.php" style="margin-left: 1rem;" class="button-log blue">
-                    <span>Login</span>
-                </a>
-                </li>
-                <li class="nav-item">
-                    <a id="logout-button" href="register.php" style="margin-left: 1rem;" class="button-log blue">
-                    <span>Register</span>
-                </a>
-                </li>
-
-
-            </ul>
-
-        </div>
-        
-       
-    </nav>
     <div class = "search-frame-bg">
         <div class="search">
             <div class= "search-header">
@@ -220,43 +172,7 @@
                 </div>
     </div>
 
-
-    <footer class = "text-bg">
-    <div class="container-fluid bg">
-        <p class="float-end mb-1">
-            <a href="#">Back to top </a>
-        </p>
-        <div class="row">
-            <div class="col-lg-4">
-                <h4>About</h4>
-                <div class="hline-w"></div>
-                <p><b>About This Webpage</b><br>
-                Founded on with a sense of purpose that make people find a good doctor easier  </p>
-            </div>
-            <div class="col-lg-4">
-                <h4>Social Links</h4>
-                <div class="hline-w"></div>
-                <p id="social-links">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <h4>Our Address</h4>
-                <div class="hline-w"></div>
-                <p><b>Showroom:</b>
-                    268 Ly Thuong Kiet, Ward 14, <br> District 10, Ho Chi Minh City<br>
-                    <b>Branch:</b>
-                    102, Ham Nghi, Ward 2<br> District 1, Ho Chi Minh City
-                </p>
-            </div>
-        </div>
-    </div>
-    <div id="copyright" class="text-center p-2">
-        © 2022 Copyright by: <i>National Medical Institute</i> 
-    </div>
-</footer>
+    <?php include 'components/footer.php'; ?>
 
 </body>
 </html>

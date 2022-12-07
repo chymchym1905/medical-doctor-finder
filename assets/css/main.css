@@ -3,6 +3,16 @@
     padding: 0;
 }
 
+:root {
+    --color-black: #2e2e2e;
+    --color-red: #d8112b;
+    --color-blue: #084487;
+    --color-1: #326789;
+    --color-2: #78a6c8;
+    --color-3: #e9eef2;
+    --color-4: #e65c4f;
+}
+
 a:link {
     text-decoration: none !important;
     cursor: pointer;
