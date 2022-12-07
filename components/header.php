@@ -2,7 +2,7 @@
     <nav class="navbar fix-top navbar-expand-sm">
         <div id="header" class="container-fluid">
             <a class="navbar-brand" href="./index.php">
-                <img src="../assets/img/logo.png" alt="Medical Doctor Finder Logo" width="50" class="d-inline-block align-top">
+                <img src="./assets/img/logo.png" alt="Medical Doctor Finder Logo" width="50" class="d-inline-block align-top">
             </a>
 
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -31,16 +31,16 @@
                 </form>
             </div>
 
-            <?php if (isset($_SESSION['id'])): ?>
+            <?php if (isset($_SESSION['username'])): ?>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                         <?php echo $_SESSION['username']; ?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="./index.php?page=profile">Profile</a></li>
-                        <li><a class="dropdown-item" href="./index.php?page=logout">Logout</a></li>
+                        <li><a class="dropdown-item" href="./views/logout.php" onclick="return session_unset()">Logout</a></li>
                     </ul>
-                </div>
+                </div> 
             <?php else: ?>
 
             <ul class="navbar-nav margin-auto">

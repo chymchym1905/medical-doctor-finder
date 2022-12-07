@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+    session_destroy();
+?>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -43,35 +45,15 @@
                 <form action="?page=login_processing" method="POST">
                     <h1>Login</h1>
                     <hr>
-                    <div class="form-group
-                <?php
-                    if (isset($_SESSION['error']['username'])) {
-                        echo 'has-error';
-                    }
-                    ?>
-                ">
+                    <div class="form-group">
                         <label for="username"><b>Username</b></label>
-                        <input type="email" class="form-control" id="username" name="username" placeholder="Enter username">
-                        <?php
-                        if (isset($_SESSION['error']['username'])) {
-                            echo '<span class="help-block">' . $_SESSION['error']['username'] . '</span>';
-                        }
-                        ?>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username">
+
                     </div>
-                    <div class="form-group
-                <?php
-                    if (isset($_SESSION['error']['password'])) {
-                        echo 'has-error';
-                    }
-                    ?>
-                ">
+                    <div class="form-group">
                         <label for="password"><b>Password</b></label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
-                        <?php
-                        if (isset($_SESSION['error']['password'])) {
-                            echo '<span class="help-block">' . $_SESSION['error']['password'] . '</span>';
-                        }
-                        ?>
+
                     </div>
                     <button type="submit" name="login-btn" class="btn btn-primary mb-3">Login</button>
 

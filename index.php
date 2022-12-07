@@ -45,8 +45,6 @@ if (isset($_GET['page'])) {
         include 'views/register.php';
     } elseif ($page == 'register_processing') {
         include 'libs/process-handling/register-handling.php';
-    } elseif ($page == 'logout') {
-        include 'views/logout.php';
     } elseif ($page == 'about') {
         include 'views/about.php';
     } elseif ($page == 'doctors') {
@@ -60,5 +58,7 @@ if (isset($_GET['page'])) {
     include 'views/home.php';
 }
 ?>
+
+
 </body>
 </html>

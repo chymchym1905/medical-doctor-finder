@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -20,14 +20,20 @@
     <!-- Google maps -->
     <script src = "https://maps.googleapis.com/maps/api/js"></script>
 
+    <script defer src = "assets/js/authen.js"></script>
+
 </head>
 <body>
-<?php include 'components/header.php'; ?>
+<?php include "components/header.php";
+    if(isset($_GET['error'])){
+        echo $_GET['error'];
+    }
+?>
 
 <div class="container content-wrap">
     <div class="row">
         <div class="col-md-6">
-            <form action="?page=register_processing" method="post">
+            <form action="?page=register_processing" method="post" id="form">
                 <h1>Register</h1>
                 <hr>
                 <div class="form-group">
@@ -44,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" id="email" class="form-control" required>
+                    <input type="text" placeholder="Enter Email" name="email" id="email" class="form-control" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
                 </div>
                 <div class="form-group">
                     <label for="password"><b>Password</b></label>
@@ -64,6 +70,9 @@
     </div>
 </div>
 
-<?php include 'components/footer.php'; ?>
+<?php include 'components/footer.php';
+
+?>
 </body>
+
 </html>
