@@ -16,7 +16,7 @@
 
     <script src="https://kit.fontawesome.com/57448d1974.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- <script src="js/cart.js"></script> -->
+    <script src="./libs/search.js"></script>
 
 
 </head>
@@ -38,11 +38,22 @@
             </div>
             <br>
             
-            </form>
+            <form>
             <div >    
-                <input style="width: 25vw;" type="search" class="main-search-bar" 
-                type="text" placeholder = "Search..">
+                <input onfocusin = "toggleSearch()" onfocusout = "hideSearch()" 
+                style="width: 25vw;" type="search" class="main-search-bar" 
+                type="text" placeholder = "Search doctor by name">
             </div>
+            </form>
+
+            <!-- drop down list -->
+            <div class = "search-list-wrap" id=''>
+                <div class="mysearch-list">
+                    <a href=# class="mylist-link" ></a>
+                </div>
+            </div>
+
+
         </div>
 
 
@@ -54,7 +65,7 @@
         </div style = "margin-top: 5px;">
             <form action="" method="post" class = "form-inline">
                 <div class="form-field">
-                    <select class="select" name="province">
+                    <select class="region" name="province">
                         <option value="ca-nuoc">Choose Province</option>
                         <option value="Hà Nội">Hà Nội</option>
                         <option value="Hà Giang">Hà Giang</option>
@@ -124,7 +135,7 @@
 
                 </div>
                 <div class="form-field">
-                    <select name ="speciality" class="select s1">
+                    <select name ="speciality" class="dept">
                         <option value="tat-ca-chuyen-khoa">Department</option>
                             <option value="nhi" >Nhi</option>
                             <option value="san-phu" >Sản phụ khoa</option>
@@ -161,11 +172,7 @@
                             <option value="tam-ly" >T&acirc;m L&yacute;</option>
                             </select>
                 </div>
-                <div class="form-field">
-                    <input class="select" placeholder="Doctor Id" name="doctor_id" 
-                    style="width: 100%;padding: 5px;border: 1px solid #848991;border-radius: 3px;
-                    color: black;background-color: rgba(255, 255, 255, 0.8);opacity: 0.6;height: 40px;">
-                </div>
+
                 <div class = "button-custom">
                     <button type="submit" class="but ">Filter</button>
                 </div>
@@ -174,4 +181,17 @@
     <?php include 'components/footer.php'; ?>
 
 </body>
+
+<script type="text/javascript">
+    let searchlist = document.querySelector(".search-list-wrap");
+    
+
+    function hideSearch(){
+        searchlist.setAttribute('id','');
+    }
+
+    function toggleSearch(){
+        searchlist.setAttribute('id','open');
+    }
+</script>
 </html>

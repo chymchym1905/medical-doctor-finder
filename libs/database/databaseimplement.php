@@ -49,7 +49,7 @@ class DatabaseClass
 
     // Get filtered Doctorss
     public function getFilteredDoctorss($Doctors_name, $brand, $os, $cpu, $ram, $storage, $min_price, $max_price) {
-        $sql = "CALL filterDoctorss(?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "CALL filterDoctors(?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ssssssii", $Doctors_name, $brand, $os, $cpu, $ram, $storage, $min_price, $max_price);
         $stmt->execute();
