@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="format-detection" content="telephone=no">
-    <title>Electro</title>
+    <title>Login</title>
     <!--reset css-->
     <link rel="stylesheet" href="../assets/css/register.css" />
     <link rel="stylesheet" href="../assets/css/utilities.css" />
