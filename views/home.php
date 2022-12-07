@@ -134,16 +134,16 @@
 
 
                 </div>
-                <div class="form-field">
+                <div class="form-field"> 
                     <select name ="speciality" class="dept">
                         <option value="tat-ca-chuyen-khoa">Department</option>
-                            <option value="nhi" >Nhi</option>
-                            <option value="san-phu" >Sản phụ khoa</option>
-                            <option value="da-lieu" >Da liễu</option>
-                            <option value="tieu-hoa-gan-mat" >Ti&ecirc;u h&oacute;a</option>
-                            <option value="than-kinh" >Thần kinh</option>
-                            <option value="tai-mui-hong" >Tai Mũi Họng</option>
-                            <option value="co-xuong-khop" >Cột Sống, Cơ Xương Khớp</option>
+                            <option value="Nhi" >Nhi</option>
+                            <option value="Sản phụ khoa" >Sản phụ khoa</option>
+                            <option value="Da liễu" >Da liễu</option>
+                            <option value="Tiêu Hóa" >Ti&ecirc;u h&oacute;a</option>
+                            <option value="Thần Kinh" >Thần kinh</option>
+                            <option value="Tai Mũi Họng" >Tai Mũi Họng</option>
+                            <option value="Cột Sống, Cơ Xương Khớp" >Cột Sống, Cơ Xương Khớp</option>
                             <option value="nhan-khoa" >Mắt, Nh&atilde;n Khoa</option>
                             <option value="nam-khoa" >Tiết Niệu Nam Khoa</option>
                             <option value="ung-buoi" >Ung Bướu, Ung Thư</option>
@@ -172,6 +172,10 @@
                             <option value="tam-ly" >T&acirc;m L&yacute;</option>
                             </select>
                 </div>
+
+                <!-- ĐỔI TOÀN BỘ VALUE CHỖ NÀY THÀNH TIẾNG VIỆT SAO CHO KHỚP DATABASE -->
+                <!-- ĐỔI TOÀN BỘ VALUE CHỖ NÀY THÀNH TIẾNG VIỆT SAO CHO KHỚP DATABASE -->
+                <!-- ĐỔI TOÀN BỘ VALUE CHỖ NÀY THÀNH TIẾNG VIỆT SAO CHO KHỚP DATABASE -->
 
                 <div class = "button-custom">
                     <button type="submit" name="filter" class="but ">Filter</button>
