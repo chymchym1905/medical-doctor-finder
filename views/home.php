@@ -63,7 +63,7 @@
             <h2>You Can Also Use This For Advance Searching</h2>
             <br>
         </div style = "margin-top: 5px;">
-            <form action="" method="post" class = "form-inline">
+            <form action="./libs/process-handling/filter-search.php" method="post" class = "form-inline">
                 <div class="form-field">
                     <select class="region" name="province">
                         <option value="ca-nuoc">Choose Province</option>
@@ -174,7 +174,7 @@
                 </div>
 
                 <div class = "button-custom">
-                    <button type="submit" class="but ">Filter</button>
+                    <button type="submit" name="filter" class="but ">Filter</button>
                 </div>
     </div>
 
