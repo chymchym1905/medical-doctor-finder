@@ -47,7 +47,7 @@
     </div> -->
 
     <section id="about-us">
-        <div class="about-text" style="margin-top: 4rem;">
+        <div class="about-text content-wrap" style="margin-top: 4rem;">
             <h2>Introduction</h2>
             <p>Welcome to MD Finder, your number one source for doctors appointment booking. We're dedicated to giving you the very best of service, with a focus on dependability, customer service and uniqueness. Founded in 2022 as a group project, MDFinder thrive to become a better version of itself everyday with the upgrades in functionalities, services and well-looking appearence.</p>
             <p>We hope you enjoy our services as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us!</p>

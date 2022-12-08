@@ -32,7 +32,7 @@
     <div class="container-fluid">
         <div class="row text-center py-5">
             <h1>Medical Facilities</h1>
-            <div id="maps" style="width: 100%; height: 500px;"></div>
+            <div id="maps" style="width: 100%; height: 700px;"></div>
         </div>
     </div>
     <?php include 'components/footer.php'; ?>

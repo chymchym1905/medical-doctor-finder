@@ -143,7 +143,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             if(isset($_POST["filter"])){
             $result = $database->searchData($_POST["speciality"]);
             while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_desc']);
+                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic']);
             }
             }
         ?>

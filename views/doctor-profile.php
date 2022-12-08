@@ -1,22 +1,13 @@
-<?php
-#session_start();
-require('libs/cards_display.php');
-require('libs/database/databaseimplement.php');
-
-$database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Doctor List</title>
+    <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/css/register.css">
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -35,24 +26,17 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 <body>
 <?php include 'components/header.php'; ?>
-<div class="container-fluid">
-    <div class="row text-center py-5">
-        <?php
-            if(empty($_POST["search"])){
-            $result = $database->getAllDoctors();
-            while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic']);
-                // create a card for each doctor with html
-            }
-            } else{
-            $result = $database->searchData($_POST["search"]);
-            while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic']);
-            }
-            }
-        ?>
+
+    <div class="container-fluid">
+        <div class="row text-center py-5">
+            <h1>Profile</h1>
+        </div>
     </div>
-</div> 
+
+
+
+
+
 <?php include 'components/footer.php'; ?>
 </body>
 </html>

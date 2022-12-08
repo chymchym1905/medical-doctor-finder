@@ -8,7 +8,7 @@
                 <h4>About</h4>
                 <div class="hline-w"></div>
                 <p><b>MDFinder</b><br>
-                    Founded on with a sense of purpose that make people find a good doctor easier  </p>
+                    On a mission to provide top-quality medical service  </p>
             </div>
             <div class="col-lg-4">
                 <h4>Social Links</h4>
