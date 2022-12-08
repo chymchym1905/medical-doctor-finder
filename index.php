@@ -56,6 +56,14 @@ if (isset($_GET['page'])) {
         include 'views/medical-facilities.php';
     } elseif ($page == 'user-profile') {
         include 'views/user-profile.php';
+    } elseif ($page == 'appointment') {
+        include 'views/appointment.php';
+    } elseif ($page == 'admin-user') {
+        include 'views/admin/user/index.php';
+    } elseif ($page == 'admin-create-user') {
+        include 'views/admin/user/create.php';
+    } elseif ($page == 'admin-edit-user') {
+        include 'views/admin/user/edit.php';
     } else {
         //include 'views/register.php';
         die('Page Not Found!');

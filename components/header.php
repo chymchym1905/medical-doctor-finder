@@ -38,11 +38,17 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="./index.php?page=user-profile">Profile</a></li>
-                        <li><a class="dropdown-item" href="./views/logout.php" onclick="return session_unset()">Logout</a></li>
-                    </ul>
-                </div> 
-            <?php else: ?>
 
+                        <?php //if ($_SESSION['user_type'] == 'admin'): ?>
+                            <li><a class="dropdown-item" href="./index.php?page=admin-user">User</a></li>
+                        <?php //endif; ?>
+
+                        <li><a class="dropdown-item" href="./index.php?page=appointment">Appointment</a></li>
+                        <li><a class="dropdown-item" href="./views/logout.php" onclick="return session_unset()" style="color: red">Logout</a></li>
+                    </ul>
+                </div>
+
+            <?php else: ?>
             <ul class="navbar-nav margin-auto">
                 <li class="nav-item">
                     <a id="logout-button" href="./index.php?page=login" style="margin-left: 1rem;" class="button-log blue">

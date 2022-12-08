@@ -9,7 +9,7 @@
     <!-- CSS -->
     
     
-    <link rel="stylesheet" href="./assets/css/appointment.css">
+    <link rel="stylesheet" href="../assets/css/appointment.css">
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
