@@ -43,9 +43,6 @@ echo '
                     <span class="idd1">
                         Description: Doctor
                     </span> 
-                    <span>
-                        <i class="fa fa-copy"></i>
-                    </span> 
                 </div> 
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> 
                     <span class="number">1069 <span class="follow">Followers</span>
@@ -55,7 +52,7 @@ echo '
                     <button class="btn1 btn-dark">Edit Profile</button> 
                 </div> 
                 <div class="text mt-3"> 
-                    <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/ Creative Director by Day #NFT minting@ with FND night. 
+                    <span>Thuy Tien is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/ Creative Director by Day #NFT minting@ with FND night. 
                     </span> 
                 </div>
                 <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center"> 

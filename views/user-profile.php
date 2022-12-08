@@ -37,14 +37,11 @@ echo '
                 <button class="btn btn-secondary"> 
                     <img src = "" height="100" width="100" />
                 </button> 
-                <span class="name mt-3">Vo Thi Thuy Tien</span> 
+                <span class="name mt-3">Vo Van Kiet</span> 
                 <span class="idd">@</span> 
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> 
                     <span class="idd1">
                         Description: A user
-                    </span> 
-                    <span>
-                        <i class="fa fa-copy"></i>
                     </span> 
                 </div> 
                 <div class="d-flex flex-row justify-content-center align-items-center mt-3"> 
@@ -52,7 +49,7 @@ echo '
                     </span> 
                 </div> 
                 <div class=" d-flex mt-2"> 
-                    <button class="btn1 btn-dark">Edit Profile</button> 
+                    <button class="btn1 btn-dark">Order Appointment</button> 
                 </div> 
                 <div class="text mt-3"> 
                     <span>Eleanor Pena is a creator of minimalistic x bold graphics and digital artwork.<br><br> Artist/ Creative Director by Day #NFT minting@ with FND night. 
