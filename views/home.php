@@ -17,14 +17,7 @@
     <script src="https://kit.fontawesome.com/57448d1974.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="./libs/search.js"></script>
-
-
 </head>
-<!--Body section-->
-<!--Navbar-->
-
-<!--Navigation bar-->
-
 
 <body>
     <?php include "components/header.php"; ?>
