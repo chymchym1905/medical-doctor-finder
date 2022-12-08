@@ -7,7 +7,7 @@
             <div class="col-lg-4">
                 <h4>About</h4>
                 <div class="hline-w"></div>
-                <p><b>About This Webpage</b><br>
+                <p><b>MDFinder</b><br>
                     Founded on with a sense of purpose that make people find a good doctor easier  </p>
             </div>
             <div class="col-lg-4">
@@ -22,9 +22,9 @@
             <div class="col-lg-4">
                 <h4>Our Address</h4>
                 <div class="hline-w"></div>
-                <p><b>Showroom:</b>
+                <p><b>Main Office:</b>
                     268 Ly Thuong Kiet, Ward 14, <br> District 10, Ho Chi Minh City<br>
-                    <b>Branch:</b>
+                    <b>Branch Office:</b>
                     102, Ham Nghi, Ward 2<br> District 1, Ho Chi Minh City
                 </p>
             </div>

@@ -21,7 +21,6 @@
 
 </head>
 <!--Body section-->
-<body>
 <!--Navbar-->
 
 <!--Navigation bar-->
