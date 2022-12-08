@@ -24,7 +24,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
     <script src="https://kit.fontawesome.com/57448d1974.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="./libs/search.js"></script>
+
 </head>
 
 <body>
@@ -49,7 +49,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             <!-- drop down list -->
             <div class = "search-list-wrap" id=''>
                 <div class="mysearch-list">
-                    <a href=# class="my-list-link" ></a>
+                    
                 </div>
             </div>
 
@@ -63,7 +63,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             <h2>Search by doctor department</h2>
             <br>
         </div style = "margin-top: 5px;" class="row text-center py-5">
-            <form action="?page=home" method="post" class = "form-inline">
+            <form action="" method="post" class = "form-inline">
                 <!-- <div class="form-field">
                     <select class="region" name="province">
                         <option value="">Choose District</option>
@@ -142,8 +142,9 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
         <?php
             if(isset($_POST["filter"])){
             $result = $database->searchData($_POST["speciality"]);
+            if($result!=null)
             while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_desc'], $row['md_photo'], $row['md_clinic']);
+                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic'], $row['md_desc']);
             }
             }
         ?>
