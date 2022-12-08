@@ -58,7 +58,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 
     </div>
-    <div class = "container-fluid search-filter bg">
+    <div class = "container-fluid search-filter" style="background-color: var(--color-3)">
         <div class = "search-filter-header">
             <h2>Search by doctor department</h2>
             <br>
