@@ -1,4 +1,4 @@
-<footer class = "footer-bg">
+<div id="footer" class = "footer-bg">
     <div class="container-fluid footer-about">
         <p class="float-end mb-1">
             <a href="#" style="color: var(--color-3)">Back to top </a>
@@ -33,4 +33,4 @@
     <div id="copyright" class="text-center p-2">
         <h6>Copyright &copy 2022 Medical Doctor Finder</h6>
     </div>
-</footer>
+</div>

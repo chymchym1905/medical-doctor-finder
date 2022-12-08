@@ -54,6 +54,8 @@ if (isset($_GET['page'])) {
         include 'views/doctor-list.php';
     } elseif ($page == 'medical-facilities') {
         include 'views/medical-facilities.php';
+    } elseif ($page == 'user-profile') {
+        include 'views/user-profile.php';
     } else {
         //include 'views/register.php';
         die('Page Not Found!');
