@@ -33,7 +33,7 @@
     <div class = "search-frame-bg">
         <div class="search">
             <div class= "search-header">
-                <h1>Medical Doctor Finder</h1>
+                <h1 style="color: var(--color-3)">Medical Doctor Finder</h1>
                 <b>For Your Better Health Care</b>
             </div>
             <br>
@@ -49,7 +49,7 @@
             <!-- drop down list -->
             <div class = "search-list-wrap" id=''>
                 <div class="mysearch-list">
-                    <a href=# class="mylist-link" ></a>
+                    <a href=# class="my-list-link" ></a>
                 </div>
             </div>
 

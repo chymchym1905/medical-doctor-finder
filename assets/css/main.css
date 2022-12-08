@@ -172,7 +172,8 @@ nav {
 
 .search-frame-bg {
     position: relative;
-    background-image: url("../img/family.jpg");
+    z-index: 2;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/family.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -216,10 +217,8 @@ nav {
     font-family: "Inter Regular";
     font-size: 64px;
     display: block;
-    color: white;
+    color: var(--color-4);
     margin-top: 10rem;
-
-
 }
 
 .main-search-bar {
@@ -230,7 +229,7 @@ nav {
     font-size: 14px;
     line-height: 16px;
     color: black;
-    background: white url("../img/search-icon.jpg") no-repeat right;
+    background: white url("../img/magnifying-glass.png") no-repeat right;
     background-size: 25px;
     border-radius: 25px;
     border: 0.25px solid black;
