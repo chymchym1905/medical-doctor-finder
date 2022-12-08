@@ -30,7 +30,7 @@ echo '
         <div class="row text-center py-5">
             <h1>Profile</h1>
         </div>
-    </div>
+
     <div class="container mt-4 mb-4 p-3 d-flex justify-content-center"> 
         <div class="card p-4"> 
             <div class=" image d-flex flex-column justify-content-center align-items-center"> 
@@ -66,6 +66,7 @@ echo '
                 </div> 
             </div> 
         </div>
+    </div>
     </div>'
 
 ?>
