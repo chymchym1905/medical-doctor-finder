@@ -28,15 +28,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `doctor` (
-  `md_id` int(3) DEFAULT NULL,
-  `md_name` varchar(41) DEFAULT NULL,
-  `links-href` varchar(108) DEFAULT NULL,
-  `md_dept` varchar(35) DEFAULT NULL,
-  `md_clinic` varchar(542) DEFAULT NULL,
-  `md_address` varchar(11) DEFAULT NULL,
-  `md_photo` varchar(54) DEFAULT NULL,
-  `md_desc` varchar(1280) DEFAULT NULL,
-  `md_degree` varchar(446) DEFAULT NULL
+    `md_id` int(3) DEFAULT NULL,
+    `md_name` varchar(41) DEFAULT NULL,
+    `links-href` varchar(108) DEFAULT NULL,
+    `md_dept` varchar(35) DEFAULT NULL,
+    `md_clinic` varchar(542) DEFAULT NULL,
+    `md_address` varchar(11) DEFAULT NULL,
+    `md_photo` varchar(54) DEFAULT NULL,
+    `md_desc` varchar(1280) DEFAULT NULL,
+    `md_degree` varchar(446) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -50,7 +50,7 @@ INSERT INTO `doctor` (`md_id`, `md_name`, `links-href`, `md_dept`, `md_clinic`, 
 (4, 'Bác sĩ Mào Thạch Sơn', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-mao-thach-son-89062/chan-thuong-chinh-hinnh-cot-song', 'Chấn thương chỉnh hình - Cột sống', 'CHuyên khoa chấn thương chỉnh hình tại Bệnh viện Triều An', 'Hồ Chí Minh', 'public/images/doctor/drmaotrachson.jpg', 'CHuyên khoa chấn thương chỉnh hình tại Bệnh viện Triều An', 'Học Viện Quân Y'),
 (5, 'Bác sĩ Trần Quốc Tuấn', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-tran-quoc-tuan-89070/chan-thuong-chinh-hinnh-cot-song', 'Chấn thương chỉnh hình - Cột sống', 'Bệnh viện Đa khoa Tâm Anh HCM', 'Hồ Chí Minh', 'public/images/doctor/drtranquoctuan1.jpg', 'CHuyên khoa chấn thương chỉnh hình tại Bệnh viện đa khoa Tâm Anh HCM. CHuyên khám và điều trị các bệnh  Hậu phẫu chấn thương sọ não, cơ xương khớp, Di chứng Đột quỵ, Bệnh lý thần kinh- cơ, Chấn thương thể thao...\n- Chích gân, khe khớp.', 'Đại học y dược HCM'),
 (6, 'Bác sĩ, Thạc sĩ LÊ VĂN TƯ', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-le-van-tu-89140/chan-thuong-chinh-hinnh-cot-song', 'Chấn thương chỉnh hình - Cột sống', '2001-2008	BÁC SĨ CTCH	BV CHỢ RẪY\n2009-2012	GĐ PK ĐK VIETSIN	TPHCM\n2013-2016	PGĐ CHUYÊN MÔN	BV TÂM TRÍ SÀI GÒN\n2017-NAY	BS CTCH\nGIẢNG VIÊN KHOA Y	PK QUỐC TẾ EXSON\nĐH NGUYỄN TẤT THÀNH', 'Hồ Chí Minh', 'public/images/doctor/drlevantu.jpg', 'Chuyên khoa chính	CHẤN THƯƠNG CHỈNH HÌNH, Học vị	THẠC SĨ BÁC SĨ, Chức vụ	THSBS CTCH-PKQT EXSON, Giảng viên khoa Y-ĐH NGUYỄN TẤT THÀNH, HỢP TÁC CHUYÊN MÔN: BV TÂM TRÍ SÀI GÒN, BV STO PHƯƠNG ĐÔNG, BV BƯU ĐIỆN, BV NAM SÀI GÒN… Chuyên khám và điều trị các bệnh về CHẤN THƯƠNG CƠ, XƯƠNG, KHỚP, DÂY CHẰNG	ĐAU, SƯNG BẦM, BIẾN DẠNG, MẤT VẬN ĐỘNG….SAU CHẤN THƯƠNG, TRẬT KHỚP, DÂY CHẰNG\nBỆNH LÍ CƠ XƯƠNG KHỚP: THOÁI HÓA KHỚP, VIÊM GÂN, VIÊM KHỚP, HOẠI TỬ CHỎM XƯƠNG ĐÙI….	ĐAU CƠ, XƯƠNG, KHỚP, DÂY CHẰNG KHÔNG DO CHẤN THƯƠNG', '1995-2001	BÁC SĨ ĐA KHOA	ĐH Y DƯỢC TP.HCM\n2006-2008	THS.BS CTCH	ĐH Y DƯỢC TP.HCM'),
-(7, 'Bác sĩ TRƯƠNG VIẾT THÔNG', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-truong-viet-thong-89999/chan-thuong-chinh-hinnh-cot-song', 'Chấn thương chỉnh hình - Cột sống', '1- Mọi người chuẩn bị sẵn giấy bút, ghi sẵn các câu hỏi hoặc các vấn đề thắc mắc của mình ra giấy để hỏi Bs Thông.\n2- Nếu có X Quang mới chụp hay giấy tờ toa thuốc cũ thì chụp hình và gửi để Bs xem trước. Có thể soạn sẵn các câu hỏi trên mục 1, và gửi trước.\n3- Đăng kí  => Hẹn giờ khám và Bs sẽ xác nhận giờ thuận tiện và gọi qua video call.\n4- Nên ở nơi yên tĩnh và sóng wifi mạnh hoặc 3G ổn định. Điện thoại có loa ngoài hoặc đeo tai nghe.\n5- Nếu không rành về điện thoại có thể nhờ người thân trợ giúp.\nThương mến ❤️\n\nBs Trương Viết Thông', 'Hồ Chí Minh', 'public/images/doctor/drtruongvietthong.jpg', 'Đứt dây chằng chéo trước khớp gối', 'Đại học y dược HCM'),
+(7, 'Bác sĩ TRƯƠNG VIẾT THÔNG', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-truong-viet-thong-89999/chan-thuong-chinh-hinnh-cot-song', 'Chấn thương chỉnh hình - Cột sống', '1- Mọi người chuẩn bị sẵn giấy bút, ghi sẵn các câu hỏi hoặc các vấn đề thắc mắc của mình ra giấy để hỏi Bs Thông.\n2- Nếu có X Quang mới chụp hay giấy tờ toa thuốc cũ thì chụp hình và gửi để Bs xem trước. Có thể soạn sẵn các câu hỏi trên mục 1, và gửi trước.\n3- Đăng kí => Hẹn giờ khám và Bs sẽ xác nhận giờ thuận tiện và gọi qua video call.\n4- Nên ở nơi yên tĩnh và sóng wifi mạnh hoặc 3G ổn định. Điện thoại có loa ngoài hoặc đeo tai nghe.\n5- Nếu không rành về điện thoại có thể nhờ người thân trợ giúp.\nThương mến ❤️\n\nBs Trương Viết Thông', 'Hồ Chí Minh', 'public/images/doctor/drtruongvietthong.jpg', 'Đứt dây chằng chéo trước khớp gối', 'Đại học y dược HCM'),
 (8, 'Bác sĩ, Tiến sĩ Huỳnh Văn Khoa', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bac-si-tien-si-huynh-van-khoa-65807/co-xuong-khop', 'Cột Sống, Cơ Xương Khớp', 'Bệnh viện Chợ Rẫy', 'Hồ Chí Minh', 'public/images/doctor/743717778bshuynhvankhoa.jpg', '10 năm Chuyên khoa cơ xương khớp chuyên xâu', 'học tiến sĩ về cơ xương khớp chuyên xâu tại Pháp'),
 (9, 'Bác sĩ Nguyễn Ngọc Thôi', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-ngoc-tho-88993/co-xuong-khop', 'Cột Sống, Cơ Xương Khớp', 'Bệnh viện Đại Học Y Dược Hồ Chí Minh', 'Hồ Chí Minh', 'public/images/doctor/drnguyenngocthoi.jpg', 'Chuyên cột sống, thoát vị, thoái hoá cột sống, các bệnh lý cột sống, thoái hoá khớp, chấn thương thể thao, gãy xương, trật khớp, dây chằng tại Bệnh viện Đại Học Y Dược Hồ Chí Minh', 'Đại học y dược HCM'),
 (10, 'Bác sĩ BÙI XUÂN HUÂN', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-bui-xuan-huan-89191/co-xuong-khop', 'Cột Sống, Cơ Xương Khớp', 'Giám Đốc tại TMV SIAM THÁI LAN\nDoctor tại Bệnh Viện Tân Bình\nTừng làm BÁC SỸ tại Bệnh viện Phú Nhuận\nTừng làm Bác sĩ tại Bệnh Viện Đa Khoa Thái An\nTừng làm BÁC SỸ tại Bệnh Viện STO Phương Đông', 'Hồ Chí Minh', 'public/images/doctor/drbuixuanhuan.jpg', 'Bs khoa Ngoại PT: CTCH, THAY KHỚP, NỘI SOI KHỚP, Pt TVĐĐ CỘT SỐNG, PT TẠO HÌNH THẨM MỸ', 'Học Ngoại Thần Kinh tại BV Chợ Rẫy\nHọc Phẫu Thuật Tạo Hình Thẩm Mỹ tại ĐH Y Hà Nội\nHọc Gây mê hồi sức tại ĐH Y Dược TPHCM\nHọc Đại học Y Khoa tại Đại Học Y Thái Bình'),
@@ -65,7 +65,7 @@ INSERT INTO `doctor` (`md_id`, `md_name`, `links-href`, `md_dept`, `md_clinic`, 
 (19, 'Bác sĩ Vi Mạnh Linh', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-vi-manh-linh-88941/da-lieu', 'Da liễu', 'Bác sĩ da liễu tại Phòng Khám Da Liễu Sài Gòn\nViện Thẩm Mỹ Jollie D\n Viện Sắc Đẹp KeangNam Korea\nBác sĩ thẩm mỹ tại Thẩm mỹ MIA', 'Hồ Chí Minh', 'public/images/doctor/drvimanhlinh.jpg', 'Nhiều năm kinh nghiêm về da liễu thẩm mỹ tại Bác sĩ da liễu tại Phòng Khám Da Liễu Sài Gòn', 'Đại học y dược HCM và Bệnh viện Da Liễu thành phố Hồ Chí Minh'),
 (20, 'Bác Sĩ Trần Thanh Trường', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-bac-si-truong-88952/da-lieu', 'Da liễu', 'Thẩm mỹ viện CK Beauty và Cosany MD Clinic và Bác sĩ tại khoa Ngoại-Laser-Thẩm mỹ bệnh viện da liễu Quảng Nam', 'Hồ Chí Minh', 'public/images/doctor/drbstruong.jpg', 'Chuyên thẩm mỹ làm đệp tại Thẩm mỹ viện CK Beauty và Cosany MD Clinic', 'Bệnh viện Da Liễu thành phố Hồ Chí Minh \nvà \nĐại Học Y Dược TP Hồ Chí Minh'),
 (21, 'Bác sĩ Nguyễn Đức Quyền', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-duc-quyen-88998/da-lieu', 'Da liễu', 'Phòng Khám Platinum spa and clinic', 'Hồ Chí Minh', 'public/images/doctor/drnguyenducquyen.jpg', 'Chuyên khoa da liễu thẩm mỹ tại  tại Phòng Khám Platinum spa and clinic', 'Học Bác sĩ Đa Khoa tại Hanoi Medical University'),
-(22, 'Bác sĩ Nguyễn Văn Mạnh', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-van-manh-89104/da-lieu', 'Da liễu', 'Phòng khám chuyên khoa da liễu Việt Pháp', 'Hồ Chí Minh', 'public/images/doctor/drnguyenvanmanh.jpg', '20 năm  bệnh viện Chợ rẫy', 'Đại học y Hà Nội'),
+(22, 'Bác sĩ Nguyễn Văn Mạnh', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-van-manh-89104/da-lieu', 'Da liễu', 'Phòng khám chuyên khoa da liễu Việt Pháp', 'Hồ Chí Minh', 'public/images/doctor/drnguyenvanmanh.jpg', '20 năm bệnh viện Chợ rẫy', 'Đại học y Hà Nội'),
 (23, 'Bác sĩ CK1 Nguyễn Phương Thảo', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-phuong-thao-89131/da-lieu', 'Da liễu', 'Phòng khám chuyên khoa da liễu- thẩm mỹ Pensilia', 'Hồ Chí Minh', 'public/images/doctor/drnguyenphuongthao.jpg', 'Chuyên khoa da liễu tại Phòng khám chuyên khoa da liễu- thẩm mỹ Pensilia', 'Đai học y dược TP HCM'),
 (24, 'Bác sĩ Lương Ngọc Khải Hoàn', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-luong-ngoc-khai-hoan-89245/da-lieu', 'Da liễu', 'Phòng Khám Da Liễu Dr Huệ Clinic', 'Hồ Chí Minh', 'public/images/doctor/drluongngockhaihoan.jpg', 'Chuyên Khoa Da Liễu \ntại \nPhòng Khám Da Liễu Dr Huệ Clinic chuyên về\nBệnh lý da liễu, các vấn đề thẩm mỹ nội khoa.', 'Đại Học Y Dược Cần Thơ. đang học Thạc Sĩ Da Liễu 2020-2022 - Đại Học Y Dược TP.HCM'),
 (25, 'Bác sĩ Trà Thị Nhật Mai', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-tra-thi-nhat-mai-90097/da-lieu', 'Da liễu', 'Bệnh viện Đa khoa Hoàn Hảo', 'Hồ Chí Minh', 'public/images/doctor/drtrathinhatmai.jpg', 'Các bệnh thường khám: mụn, nám, viêm da cơ địa, viêm da tiếp xúc, viêm da tiết bã, lang ben, nấm da, vảy nến, rụng tóc, các bệnh lí tăng giảm sắc tố, bệnh lây truyền qua đường tình dục, ...\n \nBác sĩ Trà Thị Nhật Mai tốt nghiệp đại học Y Dược TP. Hồ Chí Minh, hiện đang khám chữa bệnh chuyên khoa Da liễu. Với chuyên môn vững vàng, nhiều năm kinh nghiệm và sự ân cần, quan tâm, bác sĩ Trà Thị Nhật Mai được bệnh nhân tin tưởng lựa chọn để được thăm khám và chữa trị, tư vấn.', 'Đại học Y Dược TP. Hồ Chí Minh'),
@@ -78,7 +78,7 @@ INSERT INTO `doctor` (`md_id`, `md_name`, `links-href`, `md_dept`, `md_clinic`, 
 (32, 'Bác sĩ BÙI TRUNG HẬU', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-bui-trung-hau-90069/nhan-khoa', 'Mắt, Nhãn Khoa', 'Bệnh viện đa khoa Sài Gòn', 'Hồ Chí Minh', 'public/images/doctor/drbuitrunghau.jpg', '2016 - 2020: Bs điều trị , Bệnh viện đa khoa Sài Gòn.                                                                                                                                                          2020-nay : Bs hợp tác chuyên môn Bv quận 10 , Bv mắt Sài Gòn , Bv mắt Việt Nga , Bv mắt Hoàn Mỹ', '2009 - 2015: Tốt nghiệp Trường đại học Y Dược TPHCM, chuyên ngành BS Đa khoa\n2017 - 2019: Tốt nghiệp Trường đại học Y khoa Phạm Ngọc Thạch, chuyên ngành BS Ck I Nhãn khoa.   \n2020-nay : đang theo học chuyên ngành Bs CK II Nhãn khoa tại đại học Y Khoa Phạm Ngọc Thạch.     \n2017-nay : tham gia các khoá học chuyên sâu như siêu âm nhãn khoa , khúc xạ nhãn khoa , Phẫu thuật PHACO , phẫu thuật Khúc xạ , laser YAG , Cận lâm sàng chuyên sâu nhãn khoa'),
 (33, 'Bác sĩ  Trần Đức Anh', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bac-si-tran-duc-anh-65850/ngoai-than-kinh', 'Ngoại Thần kinh', 'Viện ngoại khoa Laser', 'Hồ Chí Minh', 'public/images/doctor/969794204bstranducanh.jpg', '10 năm Chuyên khoa Ngoại thần kinh', 'First Moscow State Medical University'),
 (34, 'Bác sĩ Trịnh Quang Nghĩa', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-trinh-quang-nghia-88902/ngoai-tim-mach', 'Ngoại tổng quát', 'Đại Học Y Dược', 'Hồ Chí Minh', 'public/images/doctor/drtrinhquangnghia.jpg', 'Chuyên khoa ngoại tổng quát', 'Đại học Y dược TP. HCM'),
-(35, 'Bác sĩ Ck2 Võ Đức Hiếu', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-vo-duc-hieu-90044/ung-buoi', 'Nhận Đặt khám Online', 'Chuyên sâu về ung thư vú, ung thư đường tiêu hoá, ung thư hệ niệu sinh dục, ung thư và bệnh lý tuyến giáp bướu cổ và Các bệnh lý Ung Thư khác và y học thường thức: đều có thể tư vấn những điểm chính và nguyên tắc trong kế hoạch điều trị, tầm soát phát hiện sớm ung thư, phòng ngừa các loại ung thư phổ biến,', 'Hồ Chí Minh', 'public/images/doctor/drvoduchieu.jpg', 'Bác Sĩ Y Đa Khoa -General Doctor tại Pham Ngoc Thach University of Medicine\nHọc Chuyên khoa cấp II Ung thư học tại DHYDTPHCM - universety of medicine & pharmacy at HCMC\nHọc Chuyên khoa cấp II- Tổ chức quản lý y tế tại Trường Đại học Y tế công cộng', ''),
+(35, 'Bác sĩ Ck2 Võ Đức Hiếu', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-vo-duc-hieu-90044/ung-buoi', 'Nhận Đặt khám Online', 'Chuyên sâu về ung thư vú, ung thư đường tiêu hoá, ung thư hệ niệu sinh dục, ung thư và bệnh lý tuyến giáp bướu cổ và Các bệnh lý Ung Thư khác và y học thường thức: đều có thể tư vấn những điểm chính và nguyên tắc trong kế hoạch điều trị, tầm soát phát hiện sớm ung thư, phòng ngừa các loại ung thư phổ biến,', 'Hồ Chí Minh', 'public/images/doctor/drvoduchieu.jpg', 'Bác Sĩ Y Đa Khoa -General Doctor tại Pham Ngoc Thach University of Medicine\nHọc Chuyên khoa cấp II Ung thư học tại DHYDTPHCM - universety of medicine & pharmacy at HCMC\nHọc Chuyên khoa cấp II- Tổ chức quản lý y tế tại Trường Đại học Y tế công cộng', ''),
 (36, 'Bác sĩ Nguyễn Tuấn Khiêm', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/nguyen-tuan-khiem-65563/nhi', 'Nhi', 'Đại học y khoa Phạm Ngọc Thạch và Bệnh viện nhi đồng 2 HCM', 'Hồ Chí Minh', 'public/images/doctor/drnguyentuankhiem.jpg', 'Nội Nhi Khoa tại Đại học y khoa Phạm Ngọc Thạch và Bệnh viện nhi đồng 2 HCM', 'Đại học y  dược HCM'),
 (37, 'BS NGUYỄN ĐĂNG KHOA', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-dang-khoa-65612/nhi', 'Nhi', 'Bệnh viện Nhi đồng 2 HCM', 'Hồ Chí Minh', 'public/images/doctor/966166934NguyenDangKhoa.jpg', '5 năm kinh nghiệm tại bệnh viện Nhi đồng 2 HCM', 'ĐH Y Dược TP.HCM'),
 (38, 'Bác sĩ Lưu Nguyễn An Thuận', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-luu-nguyen-an-thuan-88931/nhi', 'Nhi', 'Bệnh Viện Nhi Đồng 2 HCM', 'Hồ Chí Minh', 'public/images/doctor/drluunguyenanthuan.jpg', 'chuyên phẫu nhi tại Bệnh Viện Nhi Đồng 2 HCM', 'ĐH Y Dược TPHCM'),
@@ -139,7 +139,7 @@ INSERT INTO `doctor` (`md_id`, `md_name`, `links-href`, `md_dept`, `md_clinic`, 
 (93, 'Bác sĩ, Thạc sĩ Trần Huy Dũng', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-tran-huy-dung-89142/san-phu', 'Sản phụ khoa', 'Bệnh viện Từ Dũ', 'Hồ Chí Minh', 'public/images/doctor/drtranhuydung.jpg', 'Chuyên hiếm muộn, bệnh phụ khoa, khám thai , mổ u xơ … khám tiền mãn kinh tại Bệnh viện Từ Dũ', 'Đại học y dược HCM'),
 (94, 'Bác sĩ Sơn Thị Ngọc Bích', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-son-thi-ngoc-bich-89146/san-phu', 'Sản phụ khoa', 'Bệnh viện Hùng Vương', 'Hồ Chí Minh', 'public/images/doctor/drsonthingocbich.jpg', 'Khám thai, phát hiện và điều trị nhiễm trùng hậu sản, khám và điều trị viêm nhiễm phụ khoa, tầm soát ung thư cổ tử cung và tư vấn các biện pháp kế họach hóa gia đình tại Bệnh viện Hùng Vương', 'Đại học y dược HCM'),
 (95, 'Bác sĩ Trần Thị Kim Liên', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-tran-thi-kim-lien-89248/san-phu', 'Sản phụ khoa', 'Bệnh viện Từ Dũ', 'Hồ Chí Minh', 'public/images/doctor/drtranthikimlien.jpg', 'Chuyên khoa sản tại Bệnh viện Từ Dũ', 'Đại học y dược HCM'),
-(96, 'Bác sĩ Nguyễn Thị Cúc', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-thi-cuc-90198/san-phu', 'Sản phụ khoa', 'Phó trưởng khoa sản phụ khoa bệnh viện đa khoa thanh hà thanh hóa đến 9/2020\nHiện tại  làm tại phòng khám sản phụ khoa vô sinh hiếm muộn Tâm phúc Hà nội', 'Hồ Chí Minh', 'public/images/doctor/drnguyenthicuc.jpg', '20 năm  bệnh viện Chợ rẫy', 'Đại học y hải Phòng, định hướng sản phụ khoa 2016- 2017 đại học y hà nội , học siêu âm dị tật thai  tai phụ sản trung ương, học soi đốt cổ tử cung tại Bệnh viện phụ sản trung ương và \nhọc mổ nội soi phụ khoa tại Bệnh việnTừ Dũ'),
+(96, 'Bác sĩ Nguyễn Thị Cúc', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-thi-cuc-90198/san-phu', 'Sản phụ khoa', 'Phó trưởng khoa sản phụ khoa bệnh viện đa khoa thanh hà thanh hóa đến 9/2020\nHiện tại  làm tại phòng khám sản phụ khoa vô sinh hiếm muộn Tâm phúc Hà nội', 'Hồ Chí Minh', 'public/images/doctor/drnguyenthicuc.jpg', '20 năm bệnh viện Chợ rẫy', 'Đại học y hải Phòng, định hướng sản phụ khoa 2016- 2017 đại học y hà nội , học siêu âm dị tật thai  tai phụ sản trung ương, học soi đốt cổ tử cung tại Bệnh viện phụ sản trung ương và \nhọc mổ nội soi phụ khoa tại Bệnh việnTừ Dũ'),
 (97, 'Bác sĩ CK2 Bùi Thanh Vân', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-bui-thanh-van-90217/san-phu', 'Sản phụ khoa', 'Khoa Sản Phụ Khoa BV Từ Dũ HCM', 'Hồ Chí Minh', 'public/images/doctor/drbuithanhvan.jpg', 'BS Sản Phụ Khoa BV Từ Dũ', 'Đại học Y Dược TP.HCM'),
 (98, 'Tiến sĩ, Bác sĩ Nguyễn Hữu Trung', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-huu-trung-90222/san-phu', 'Sản phụ khoa', 'trưởng khoa phụ sản tại Bệnh viện Đại học Y Dược', 'Hồ Chí Minh', 'public/images/doctor/drnguyenhuutrung.jpg', 'trưởng khoa phụ sản tại Bệnh viện Đại học Y Dược\n\nGiảng viên chính thức tại Bệnh viện Hùng Vương,  \n\nGiám đốc chuyên môn tại Phòng Khám Hoàng Gia Healthcare- Hiếm muộn, Phụ sản, Siêu âm 4D, \n\nGiám đốc chuyên môn tại Phòng Khám Hiếm Muộn Hoàng Gia- 284B Nguyễn Trọng Tuyển, P10, Phú Nhuận,HCM \n\nGiảng viên tại Đại học Y Dược TP.HCM - 217 Hồng Bàng - Quận 5 - TP.HCM, \n\nĐã làm việc tại Bệnh viện Từ Dũ', 'Học Ob/Gyn tại University of Medicine and Pharmacology at HCMC,\n\nHọc Plastic surgery tại Trường Đại học Y Hà Nội, \n\nHọc Medicine tại Đại Học Y Dược Huế'),
 (99, 'Bác sĩ VŨ KIM NGÂN', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-vu-kim-ngan-90108/tai-mui-hong', 'Tai Mũi Họng', 'Bệnh viện Đa khoa Tâm Anh', 'Hồ Chí Minh', 'public/images/doctor/drvukimngan.jpg', 'là bác sĩ có tay nghề cao, gần 10 năm kinh nghiệm trong khám, điều trị các bệnh lý liên quan đến Tai Mũi Họng. Bác sĩ Ngân từng công tác chuyên môn tại 2 bệnh viện uy tín là Bệnh viện Tai Mũi Họng TP.HCM và Bệnh viện Nhân Dân Gia Định. Khám và điều trị các bệnh lý tai – mũi – họng Phẫu thuật bệnh lý tai – mũi – họng người lớn & trẻ em. Phẫu thuật nội soi Mũi xoang, nội soi vi phẫu Tai, vi phẫu Thanh quản.', 'Học CK2 tại y dược TPHCM khóa 2019-2021'),
@@ -197,22 +197,26 @@ INSERT INTO `doctor` (`md_id`, `md_name`, `links-href`, `md_dept`, `md_clinic`, 
 --
 
 CREATE TABLE `user` (
-  `firstname` varchar(30) NOT NULL,
-  `lastname` varchar(30) NOT NULL,
-  `username` varchar(30) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `id` int(255) NOT NULL
+    `firstname` varchar(30) NOT NULL,
+    `lastname` varchar(30) NOT NULL,
+    `username` varchar(30) NOT NULL,
+    `email` varchar(30) NOT NULL,
+    `password` varchar(30) NOT NULL,
+    `usertype` varchar(30) DEFAULT 'patient', -- admin, user, patient
+    `id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`firstname`, `lastname`, `username`, `email`, `password`, `id`) VALUES
-('Đậu Gia', 'Kiên', 'asd', 'kien.dauoofman@hcmut.edu.vn', '123', 1),
-('Đậu Gia', 'Kiên', 'qwe', 'kien.dauoofman@hcmut.edu.vn', '123', 2),
-('Đậu Gia', 'Kiên', 'zxc', 'kien.dauoofman@hcmut.edu.vn', '123', 3);
+INSERT INTO `user` (`firstname`, `lastname`, `username`, `email`, `password`, `usertype`, `id`) VALUES
+('Đậu Gia', 'Kiên', 'asd', 'kien.dauoofman@hcmut.edu.vn', '123', 'admin', 1),
+('Đậu Gia', 'Kiên', 'qwe', 'kien.dauoofman@hcmut.edu.vn', '123', 'admin', 2),
+('Đậu Gia', 'Kiên', 'zxc', 'kien.dauoofman@hcmut.edu.vn', '123', 'admin', 3),
+('admin', '01', 'admin01', 'admin01@admin.com', 'admin', 'admin', 4),
+('user', '01', 'doctor01', 'doctor01@user.com', 'user', 'user', 5),
+('patient', '01', 'patient01', 'patient01@patient.com', 'patient', 'patient', 6);
 
 --
 -- Indexes for dumped tables
@@ -222,7 +226,7 @@ INSERT INTO `user` (`firstname`, `lastname`, `username`, `email`, `password`, `i
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+    ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -232,7 +236,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+    MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
