@@ -101,6 +101,7 @@ div {
 .dropdown{
     position: relative;
     display: inline-block;
+    margin-left: 1em;
 }
 
 .dropdown-menu{
@@ -118,7 +119,7 @@ div {
 }
 
 .dropdown-menu a:hover {
-    background-color: #f7d03f
+    background-color: var(--color-2);
 }
 
 .dropdown:hover .dropdown-menu {
@@ -126,7 +127,7 @@ div {
 }
 
 .dropdown:hover .dropdown-toggle {
-    background-color: #f7d03f
+    background-color: var(--color-1);
 }
 
 /* About */
@@ -142,7 +143,7 @@ div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 100%;
-    height: 500px;
+    /*height: 500px;*/
     margin: 0 auto;
     margin-bottom: 2em;
     border-radius: 5px;
@@ -167,9 +168,9 @@ div {
 .card-text {
     padding: 2px 16px;
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*text-overflow: ellipsis;*/
 }
 
 /* Footer */
