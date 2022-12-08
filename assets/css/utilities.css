@@ -9,14 +9,14 @@
 
 /*======================== JUMBOTRON ===============================*/
 
-body {
-  /*padding-top: 90px;*/
-}
+/* body {
+  padding-top: 90px;
+} */
 
 @media (max-width: 980px) {
-  body {
+  /* body {
     padding-top: 90px;
-  }
+  } */
 }
 
 /*======================== LOGIN PAGE ===============================*/
