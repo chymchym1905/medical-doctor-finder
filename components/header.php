@@ -37,7 +37,7 @@
                         <?php echo $_SESSION['username']; ?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="./index.php?page=profile">Profile</a></li>
+                        <li><a class="dropdown-item" href="./index.php?page=user-profile">Profile</a></li>
                         <li><a class="dropdown-item" href="./views/logout.php" onclick="return session_unset()">Logout</a></li>
                     </ul>
                 </div> 

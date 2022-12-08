@@ -38,10 +38,10 @@ echo '
                     <img src = "" height="100" width="100" />
                 </button> 
                 <span class="name mt-3">Vo Thi Thuy Tien</span> 
-                <span class="idd">@ThuyTien503</span> 
+                <span class="idd">@</span> 
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> 
                     <span class="idd1">
-                        Oxc4c16a645_b21a
+                        Description: A user
                     </span> 
                     <span>
                         <i class="fa fa-copy"></i>
