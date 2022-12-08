@@ -1,4 +1,4 @@
-<footer class = "footer-bg">
+<div id="footer" class = "footer-bg">
     <div class="container-fluid footer-about">
         <p class="float-end mb-1">
             <a href="#" style="color: var(--color-3)">Back to top </a>
@@ -8,7 +8,7 @@
                 <h4>About</h4>
                 <div class="hline-w"></div>
                 <p><b>MDFinder</b><br>
-                    Founded on with a sense of purpose that make people find a good doctor easier  </p>
+                    On a mission to provide top-quality medical service  </p>
             </div>
             <div class="col-lg-4">
                 <h4>Social Links</h4>
@@ -33,4 +33,4 @@
     <div id="copyright" class="text-center p-2">
         <h6>Copyright &copy 2022 Medical Doctor Finder</h6>
     </div>
-</footer>
+</div>

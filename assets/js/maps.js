@@ -1,7 +1,7 @@
 function loadMap() {
 
     var mapOptions = {
-        center:new google.maps.LatLng(10.777666, 106.695981),
+        center:new google.maps.LatLng(10.772325, 106.658722),
         zoom:9,
         mapTypeId:google.maps.MapTypeId.ROADMAP
     };
@@ -9,7 +9,7 @@ function loadMap() {
     var map = new google.maps.Map(document.getElementById("maps"),mapOptions);
 
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(10.777666, 106.695981),
+        position: new google.maps.LatLng(10.772325, 106.658722),
         map: map,
         draggable: true
     });

@@ -41,24 +41,13 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             if(empty($_POST["search"])){
             $result = $database->getAllDoctors();
             while ($row = mysqli_fetch_assoc($result)){
-                //card($row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_desc']);
+                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic']);
                 // create a card for each doctor with html
-                echo '<div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="card">
-                            <img src="'. $row['md_photo'] . '" class="card-img" alt="'. $row['md_name'] .'">
-                            <div class="card-container">
-                                <h5 class="card-title">'.$row['md_name'].'</h5>
-                                <p class="card-text">'.$row['md_dept'].'</p>
-                                <p class="card-text">'.$row['md_desc'].'</p>
-                                <a href="doctor-profile.php?id='.$row['md_id'].'" class="btn btn-primary">View Profile</a>
-                            </div>
-                        </div>
-                    </div>';
             }
             } else{
             $result = $database->searchData($_POST["search"]);
             while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_desc']);
+                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic']);
             }
             }
         ?>

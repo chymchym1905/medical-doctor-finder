@@ -286,9 +286,11 @@ button.but {
     /* Firefox */
 }
 
-footer * {
+#footer * {
     font-size: .9rem;
     color: #ffffff;
+    position: relative;
+    bottom: 0;
 }
 
 #copyright {
