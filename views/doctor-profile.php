@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Medical Facilities</title>
+    <title>Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font -->
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/css/register.css">
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -22,19 +21,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Google maps -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="./assets/js/maps.js"></script>
+    <script src = "https://maps.googleapis.com/maps/api/js"></script>
 </head>
 
 <body>
-    <?php include 'components/header.php'; ?>
+<?php include 'components/header.php'; ?>
+
     <div class="container-fluid">
         <div class="row text-center py-5">
-            <h1>Medical Facilities</h1>
-            <div id="maps" style="width: 100%; height: 700px;"></div>
+            <h1>Profile</h1>
         </div>
     </div>
-    <?php include 'components/footer.php'; ?>
+
+
+
+
+
+<?php include 'components/footer.php'; ?>
 </body>
 </html>
