@@ -33,13 +33,6 @@ div {
     display: block;
 }
 
-#main {
-    margin-left: 1%;
-    margin-right: 2%;
-    padding-left: 2%;
-    padding-right: 3%;
-}
-
 .row::after {
     content: "";
     clear: both;
