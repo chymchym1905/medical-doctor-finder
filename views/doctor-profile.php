@@ -41,7 +41,7 @@ echo '
                 <span class="idd">@</span> 
                 <div class="d-flex flex-row justify-content-center align-items-center gap-2"> 
                     <span class="idd1">
-                        Description: A user
+                        Description: Doctor
                     </span> 
                     <span>
                         <i class="fa fa-copy"></i>
