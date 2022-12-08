@@ -1,6 +1,6 @@
 <?php
 
-function card($md_id, $md_name, $md_dept, $md_image, $md_loc){
+function card($md_id, $md_name, $md_dept, $md_image, $md_loc, $md_desc){
     $element="
     <div class=\"col-md-3 col-sm-6 col-xs-12\">
                         <div class=\"card\">
@@ -9,6 +9,7 @@ function card($md_id, $md_name, $md_dept, $md_image, $md_loc){
                                 <h5 class=\"card-title\">$md_name</h5>
                                 <p class=\"card-text\">Khoa $md_dept</p>
                                 <h4 class=\"card-text\">$md_loc</h4>
+                                <p class=\"card-text\">Khoa $md_desc</p>
                                 <a href=\"doctor-profile.php?id='.$md_id.'\" class=\"btn btn-primary\">View Profile</a>
                             </div>
                         </div>
