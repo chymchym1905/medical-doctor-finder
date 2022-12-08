@@ -60,6 +60,18 @@ class DatabaseClass
         $this->conn->next_result();
     }
 
+    public function filterData($crit){
+        $sql = "SELECT * FROM $this->table_name WHERE md_dept = '%$crit1%'";
+
+        $result = mysqli_query($this->conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        } else{
+            echo 'No result';
+        }
+    }
+
     public function searchData($keyword){
         $sql = "SELECT * FROM $this->table_name WHERE md_name LIKE '%$keyword%' OR md_desc LIKE '%$keyword%' OR md_dept LIKE '%$keyword%'";
 

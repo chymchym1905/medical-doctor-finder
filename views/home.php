@@ -1,3 +1,11 @@
+<?php
+#session_start();
+require('libs/cards_display.php');
+require('libs/database/databaseimplement.php');
+
+$database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,11 +60,11 @@
     </div>
     <div class = "container-fluid search-filter bg">
         <div class = "search-filter-header">
-            <h2>You Can Also Use This For Advance Searching</h2>
+            <h2>Search by doctor department</h2>
             <br>
-        </div style = "margin-top: 5px;">
-            <form action="./libs/process-handling/filter-search.php" method="post" class = "form-inline">
-                <div class="form-field">
+        </div style = "margin-top: 5px;" class="row text-center py-5">
+            <form action="?page=home" method="post" class = "form-inline">
+                <!-- <div class="form-field">
                     <select class="region" name="province">
                         <option value="">Choose District</option>
                         <option value="Quận 1">Quận 1</option>
@@ -84,7 +92,7 @@
                     </select>
 
 
-                </div>
+                </div> -->
                 <div class="form-field"> 
                     <select name ="speciality" class="dept">
                         <option value="">Department</option>
@@ -128,6 +136,19 @@
                     <button type="submit" name="filter" class="but ">Filter</button>
                 </div>
     </div>
+
+    <div class="container-fluid">
+    <div class="row text-center py-5">
+        <?php
+            if(isset($_POST["filter"])){
+            $result = $database->searchData($_POST["speciality"]);
+            while ($row = mysqli_fetch_assoc($result)){
+                card($row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_desc']);
+            }
+            }
+        ?>
+    </div>
+</div>
 
     <?php include 'components/footer.php'; ?>
 
