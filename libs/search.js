@@ -18,4 +18,6 @@ $(document).ready(function () {
       }
     });
   });
-
+$(document).on('click','.mylist-link',function(){
+  $('.search-input').val($(this).text());
+})

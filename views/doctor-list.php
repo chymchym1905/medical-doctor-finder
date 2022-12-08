@@ -56,10 +56,12 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
                     </div>';
             }
             } else{
-            $result = $database->searchData($_POST["search"]);
-            while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_desc']);
-            }
+                $result = $database->searchData($_POST["search"]);
+                if($result!=null){
+                    while ($row = mysqli_fetch_assoc($result)){
+                        card($row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_desc']);
+                    }
+                }
             }
         ?>
     </div>
