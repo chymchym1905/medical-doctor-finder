@@ -24,7 +24,7 @@ class DatabaseClass
         $this->user_name = $user_name;
         $this->password = $password;
 
-        $this->conn = mysqli_connect($server_name, $user_name, $password, $db_name);
+        $this->conn = mysqli_connect($server_name, $user_name, $password, $db_name,3308);
         mysqli_set_charset($this->conn, 'UTF8');
 
         if (!$this->conn) {

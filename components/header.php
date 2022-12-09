@@ -67,7 +67,7 @@
                     </div>
                 </form>
             </div>
-
+            <?php endif; ?>
 <?php else: ?>
 
 <div class="header">
@@ -103,7 +103,7 @@
             </div>
 
 <?php endif; ?>
-<?php endif; ?>
+
 
 
 <!-- <div class="header">
