@@ -74,6 +74,30 @@ class DatabaseClass
         }
     }
 
+    public function getAllAppointments() {
+        $sql = "SELECT * FROM $this->table_name";
+
+        $result = mysqli_query($this->conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        } else{
+            echo 'No appointment found';
+        }
+    }
+
+    public function getAppointment($ap_id) {
+        $sql = "SELECT * FROM $this->table_name WHERE ap_id = '$ap_id'";
+
+        $result = mysqli_query($this->conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        } else{
+            echo 'No appointment found';
+        }
+    }
+
     /* // Get filtered Doctorss
     public function getFilteredDoctorss($Doctors_name, $brand, $os, $cpu, $ram, $storage, $min_price, $max_price) {
         $sql = "CALL filterDoctors(?, ?, ?, ?, ?, ?, ?, ?)";

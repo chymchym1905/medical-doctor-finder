@@ -36,7 +36,7 @@ if(!isset($_SESSION['user_type'])){
 
 <body>
 <?php include "components/header.php"; ?>
-
+<h1>Users</h1>
 <div class="container-fluid">
     <div class="row">
         <div class="col-2">
@@ -73,7 +73,6 @@ if(!isset($_SESSION['user_type'])){
                     <td>' . $user['username']. '</td>
                     <td>' . $user['email'] . '</td>
                     <td>' . $user['user_type'] . '</td>
-
                 </tr>
                 '?>
                 </tbody>
