@@ -24,7 +24,7 @@ class DatabaseClass
         $this->user_name = $user_name;
         $this->password = $password;
 
-        $this->conn = mysqli_connect($server_name, $user_name, $password, $db_name,3308);
+        $this->conn = mysqli_connect($server_name, $user_name, $password, $db_name);
         mysqli_set_charset($this->conn, 'UTF8');
 
         if (!$this->conn) {
@@ -127,7 +127,7 @@ class DatabaseClass
     public function makeAppointment($ap_desc, $ap_date_time, $p_id, $md_id){
         $ap_status = 'Pending';
         $sql = "INSERT INTO appointment (ap_desc, ap_date_time, p_id, md_id, ap_status)
-                VALUES                  '$ap_desc', $ap_date_time, '$p_id', '$md_id', '$ap_status'";
+                VALUES                  ('$ap_desc', '$ap_date_time', '$p_id', '$md_id', '$ap_status')";
         mysqli_query($this->conn, $sql);
         /* if (mysqli_query($this->conn, $sql)!== null)  {
              return "Appointment created successfully";

@@ -32,6 +32,7 @@ function md_profile($md_id, $md_name, $md_dept, $md_photo, $md_clinic, $md_addre
             </div>
         </div>";
     echo $element;
+    $_SESSION['doctor_id'] = $md_id;
 }
 
 function p_profile($p_id, $p_name, $p_dob, $p_desc, $p_address, $md_id, $user_id){
