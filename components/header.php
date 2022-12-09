@@ -143,13 +143,6 @@
                         <?php echo $_SESSION['username'] ."--". $_SESSION['user_type']; ?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li><a class="dropdown-item" href="./index.php?page=user-profile">Profile</a></li>
-
-                        <?php //if ($_SESSION['user_type'] == 'admin'): ?>
-                            <li><a class="dropdown-item" href="./index.php?page=admin-user">User</a></li>
-                        <?php //endif; ?>
-
-                        <li><a class="dropdown-item" href="./index.php?page=appointment">Appointment</a></li>
                         <li><a class="dropdown-item" href="./views/logout.php" onclick="return session_unset()" style="color: red">Logout</a></li>
                     </ul>
                 </div>
