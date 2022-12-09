@@ -70,9 +70,12 @@ if (isset($_GET['page'])) {
 
     } elseif ($page == 'doctor-profile') {
         include 'views/doctor-profile.php';
-        }
     
-    else {
+        
+    } elseif ($page == 'doctor-myprofile') {
+        include 'views/doctor-myprofile.php';
+
+    } else {
         //include 'views/register.php';
         die('Page Not Found!');
     }

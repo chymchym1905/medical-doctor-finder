@@ -9,7 +9,7 @@ function card($md_id, $md_name, $md_dept, $md_image, $md_loc, $md_desc){
                                 <h5 class=\"card-title\">$md_name</h5>
                                 <p class=\"card-text\">Khoa $md_dept</p>
                                 <h4 class=\"card-text\">$md_loc</h4>
-                                <p class=\"card-text\">Khoa $md_desc</p>
+                                <p class=\"card-text\">$md_desc</p>
                                 <a href=\"?page=doctor-profile&md_id=$md_id\" class=\"btn btn-primary\">View Profile</a>
                             </div>
                         </div>
@@ -26,7 +26,7 @@ function md_profile($md_id, $md_name, $md_dept, $md_photo, $md_clinic, $md_addre
                                 <h5 class=\"card-title\">$md_name</h5>
                                 <p class=\"card-text\">Khoa $md_dept</p>
                                 <h4 class=\"card-text\">$md_clinic</h4>
-                                <p class=\"card-text\">Khoa $md_desc</p>
+                                <p class=\"card-text\">$md_desc</p>
                                 <a href=\"?page=make-appointment&md_id=$md_id\" class=\"btn btn-primary\">Make an Appointment</a>
                             </div>
                         </div>
@@ -43,7 +43,7 @@ function p_profile($p_id, $p_name, $p_dob, $p_desc, $p_address, $md_id, $user_id
                                 <h5 class=\"card-title\">$md_name</h5>
                                 <p class=\"card-text\">Khoa $md_dept</p>
                                 <h4 class=\"card-text\">$md_loc</h4>
-                                <p class=\"card-text\">Khoa $md_desc</p>
+                                <p class=\"card-text\">$md_desc</p>
                                 <a href=\"?page=doctor-profile&md_id=$md_id\" class=\"btn btn-primary\">View Profile</a>
                             </div>
                         </div>

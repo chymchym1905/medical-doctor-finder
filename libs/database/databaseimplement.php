@@ -88,7 +88,8 @@ class DatabaseClass
     }
 
     public function displayDoctor($id){
-        $sql = "SELECT * FROM $this->table_name WHERE md_id = '$id'";
+        echo $id;
+        $sql = "SELECT * FROM $this->table_name WHERE md_id = '$id' OR user_id = '$id'";
 
         $result = mysqli_query($this->conn, $sql);
 
@@ -98,8 +99,33 @@ class DatabaseClass
             echo 'No result';
         }
     }
+
+    public function makeAppointment($ap_desc, $ap_datetime, $p_id, $md_id){
+        $sql = "INSERT INTO appointment (ap_date, ap_time, p_id, md_id)
+                VALUES '$ap_desc', '$ap_datetime', '$p_id', '$md_id'";
+
+        if (mysqli_query($this->conn, $sql) == TRUE) {
+            echo "New record created successfully";
+          } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+          }
+    }
+
+    public function getAppointments() {
+        $sql = "SELECT * FROM $this->table_name";
+
+        $result = mysqli_query($this->conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        } else{
+            echo 'No result';
+        }
+
+
+}
 }
 
-$db = new DatabaseClass();
+#$db = new DatabaseClass();
 // If you have password, use the line below
 // $db = new DatabaseClass(password: "");
