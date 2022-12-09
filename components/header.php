@@ -1,5 +1,5 @@
-<?php if (isset($_SESSION['username'])){
-    if (($_SESSION['user_type']) == 'patient') { ?>
+<?php if (isset($_SESSION['username'])): ?>
+    <?php if (($_SESSION['user_type']) == 'patient'): ?>
 
 <!-- Logged in as patient -->
 <div class="header">
@@ -34,7 +34,7 @@
                 </form>
             </div>
 
-<?php } elseif (($_SESSION['user_type']) == 'doctor') {?>
+<?php elseif (($_SESSION['user_type']) == 'doctor'): ?>
 
 <div class="header">
     <nav class="navbar fix-top navbar-expand-sm">
@@ -68,7 +68,7 @@
                 </form>
             </div>
 
-<?php }} else { ?>
+<?php else: ?>
 
 <div class="header">
     <nav class="navbar fix-top navbar-expand-sm">
@@ -102,7 +102,8 @@
                 </form>
             </div>
 
-<?php }?>
+<?php endif; ?>
+<?php endif; ?>
 
 
 <!-- <div class="header">
@@ -144,11 +145,7 @@
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="./index.php?page=user-profile">Profile</a></li>
-
-                        <?php //if ($_SESSION['user_type'] == 'admin'): ?>
-                            <li><a class="dropdown-item" href="./index.php?page=admin-user">User</a></li>
-                        <?php //endif; ?>
-
+                        <li><a class="dropdown-item" href="./index.php?page=admin-user">User</a></li>
                         <li><a class="dropdown-item" href="./index.php?page=appointment">Appointment</a></li>
                         <li><a class="dropdown-item" href="./views/logout.php" onclick="return session_unset()" style="color: red">Logout</a></li>
                     </ul>
