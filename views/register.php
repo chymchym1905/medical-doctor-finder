@@ -60,6 +60,15 @@
                     <label for="password-repeat"><b>Repeat Password</b></label>
                     <input type="password" placeholder="Repeat Password" name="password-repeat" id="password-repeat" class="form-control" required>
                 </div>
+
+                <div class="form-field">
+                    <label for="user_type"><b>Registering as</b></label>
+                    <select name ="user_type" class="register-user_type">
+                        <option value="doctor">Doctor</option>
+                        <option value="patient">Patient</option>
+                    </select>
+                </div>
+
                 <button type="submit" name="register-btn" class="btn btn-primary mb-3">Register</button>
 
                 <div>

@@ -29,7 +29,7 @@
     <!-- Google maps -->
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script src="./assets/js/maps.js"></script>
+
 </head>
 
 <body>
@@ -70,21 +70,11 @@ if (isset($_GET['page'])) {
     }
     elseif ($page == 'doctor-profile') {
         include 'views/doctor-profile.php';
-    }
-    elseif ($page == 'appointment') {
-        include 'views/appointment.php';
-    }
-    elseif ($page == 'admin-user') {
-        include 'views/admin/user/index.php';
-    }
-    elseif ($page == 'admin-create-user') {
-        include 'views/admin/user/create.php';
-    }
-    elseif ($page == 'admin-edit-user') {
-        include 'views/admin/user/edit.php';
+    } 
+    elseif ($page == 'doctor-myprofile') {
+        include 'views/doctor-myprofile.php';
     }
     else {
-        //include 'views/register.php';
         die('Page Not Found!');
     }
 } else {
@@ -93,4 +83,6 @@ if (isset($_GET['page'])) {
 ?>
 
 </body>
+<script src="./assets/js/maps.js"></script>
+<script src="libs/search.js"></script>
 </html>

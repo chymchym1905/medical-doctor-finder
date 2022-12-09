@@ -20,21 +20,68 @@ SET time_zone = "+00:00";
 --
 -- Database: `mdfinder`
 --
-
+DROP TABLE IF EXISTS 'appointment'
+DROP TABLE IF EXISTS 'doctor'
+DROP TABLE IF EXISTS 'patient'
+DROP TABLE IF EXISTS 'user'
 -- --------------------------------------------------------
 
+
+CREATE TABLE user (
+  id int(32) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (id),
+  firstname varchar(128) NOT NULL,
+  lastname varchar(128) NOT NULL,
+  username varchar(128) NOT NULL,
+  email varchar(30) NOT NULL,
+  password varchar(30) NOT NULL,
+  user_type varchar(32) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE doctor (
+  md_id int(32) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (md_id),
+  md_name varchar(41),
+  links-href varchar(128),
+  md_dept varchar(50),
+  md_clinic varchar(600),
+  md_address varchar(20),
+  md_photo varchar(100),
+  md_desc varchar(1300),
+  md_degree varchar(500),
+  user_id int(32) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES user(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
 -- Table structure for table `appointment`
---
 
-CREATE TABLE `appointment` (
-  `ap_id` int(10) NOT NULL,
-  `ap_date` date DEFAULT NULL,
-  `ap_time` time DEFAULT NULL,
-  `ap_desc` varchar(512) DEFAULT NULL,
-  `p_id` int(10) NOT NULL,
-  `md_id` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE patient (
+  p_id int(32) DEFAULT NULL AUTO_INCREMENT,
+  PRIMARY KEY (p_id),
+  p_name varchar(12),
+  p_dob varchar(8),
+  p_desc varchar(12),
+  p_address varchar(22),
+  md_id int(32),
+  user_id int(32),
+  FOREIGN KEY (user_id) REFERENCES user(id),
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+CREATE TABLE appointment (
+  ap_id int(32) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (ap_id),
+  ap_date date,
+  ap_time time,
+  ap_desc varchar(512),
+  ap_status varchar(50) NOT NULL,
+  p_id int(10) NOT NULL,
+  FOREIGN KEY (p_id) REFERENCES patient(p_id)
+  md_id int(10) NOT NULL,
+  FOREIGN KEY (md_id) REFERENCES 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -42,17 +89,6 @@ CREATE TABLE `appointment` (
 -- Table structure for table `doctor`
 --
 
-CREATE TABLE `doctor` (
-  `md_id` int(10) DEFAULT NULL,
-  `md_name` varchar(41) DEFAULT NULL,
-  `links-href` varchar(108) DEFAULT NULL,
-  `md_dept` varchar(35) DEFAULT NULL,
-  `md_clinic` varchar(542) DEFAULT NULL,
-  `md_address` varchar(11) DEFAULT NULL,
-  `md_photo` varchar(54) DEFAULT NULL,
-  `md_desc` varchar(1280) DEFAULT NULL,
-  `md_degree` varchar(446) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `doctor`
@@ -164,8 +200,7 @@ INSERT INTO `doctor` (`md_id`, `md_name`, `links-href`, `md_dept`, `md_clinic`, 
 (103, 'Bác sĩ Nguyễn Tường Vũ', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-tuong-vu-89041/than-kinh', 'Thần kinh', 'Bệnh viện Chợ Rẫy HCM', 'Hồ Chí Minh', '/public/images/doctor/drnguyentruongvu.jpg', 'Chuyên khoa thần kinh tại Bệnh viện Chợ Rẫy HCM', 'Đại học y dược HCM'),
 (104, 'Bác sĩ Ck1 Hoàng Châu Bảo Đính', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-hoang-chau-bao-dinh-89168/than-kinh', 'Thần kinh', 'ĐH Y Khoa Phạm Ngọc Thạch', 'Hồ Chí Minh', '/public/images/doctor/drhoangchaubaodinh.jpg', 'CHuyên khoa nội thần kinh tại ĐH Y Khoa Phạm Ngọc Thạch. CHuyên khám và điều trị rối loạn giấc ngủ, đột quỵ, đau đầu, chóng mặt, bệnh Parkinson và các bệnh thần kinh thoái hóa, động kinh.', 'ĐH Y Dược TP Hồ Chí Minh'),
 (105, 'Thạc sĩ, Bác sĩ Nguyễn Mậu Ngọc', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-mau-ngoc-90070/than-kinh', 'Thần kinh', 'Nguyên phó phòng kế hoạch tổng hợp kiêm phụ trách phòng khám chuyên gia cao cấp bv châm cứu trung ương và \nGiám đốc phòng khám Chuyên khoa Yhct Thiên Thảo Đường', 'Hồ Chí Minh', '/public/images/doctor/drnguyenmaungoc.jpg', 'Nguyên phó phòng kế hoạch tổng hợp kiêm phụ trách phòng khám chuyên gia cao cấp bv châm cứu trung ương\nGiám đốc phòng khám Chuyên khoa Yhct Thiên Thảo Đường', 'Học viện đông y Vân nam'),
-(106, 'Bác sĩ NGUYỄN THANH KHA', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-thanh-kha-90094/than-kinh', 'Thần kinh', 'Phòng Khám Đông Y-Vật Lý Trị Liệu Tâm An', 'Hồ Chí Minh', '/public/images/doctor/drnguyenthanhkha.jpg', 'Các bệnh thường khám : Cơ xương khớp, Thần kinh cột sống', 'TRƯỜNG TRUNG CẤP Y- DƯỢC LÊ HỮU TRÁC');
-INSERT INTO `doctor` (`md_id`, `md_name`, `links-href`, `md_dept`, `md_clinic`, `md_address`, `md_photo`, `md_desc`, `md_degree`) VALUES
+(106, 'Bác sĩ NGUYỄN THANH KHA', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-nguyen-thanh-kha-90094/than-kinh', 'Thần kinh', 'Phòng Khám Đông Y-Vật Lý Trị Liệu Tâm An', 'Hồ Chí Minh', '/public/images/doctor/drnguyenthanhkha.jpg', 'Các bệnh thường khám : Cơ xương khớp, Thần kinh cột sống', 'TRƯỜNG TRUNG CẤP Y- DƯỢC LÊ HỮU TRÁC'),
 (107, 'Bác si Ck2 LÊ VĂN HIẾU NHÂN', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-le-van-hieu-nhan-89230/nam-khoa', 'Tiết Niệu Nam Khoa', 'Bệnh viện Bình Dân HCM', 'Hồ Chí Minh', '/public/images/doctor/246170446bacsi.jpg', 'khoa Niệu C bệnh viện Bình Dân HCM. Chuyên khám và điều trị bệnh Thận-Niệu-Nam giới', 'Đại học y dược HCM'),
 (108, 'Thạc sĩ, Bác sĩ Trần Thanh Phong', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-tran-thanh-phong-90134/nam-khoa', 'Tiết Niệu Nam Khoa', 'Bệnh Viện Nhân Dân 115, TPHCM', 'Hồ Chí Minh', '/public/images/doctor/drtadinhphong.jpg', 'Chuyên bệnh lý về thận: suy thận…\nBệnh lý tiết niệu: nhiễm trùng tiểu, sỏi thận, sỏi tiết niệu, bướu đường tiết niệu, u xơ tuyến tiền liệt, hẹp bao quy đầu…..\nBệnh lý nam khoa: rối loạn cương, xuất tinh sớm…\nGhép thận: tư vấn ghép thận, theo dõi sau ghép thận', 'Đại học y dược TP. HCM'),
 (109, 'Bs CK II. Nguyễn Bá Hiệp', 'https://tdoctor.vn/danh-sach-bac-si-chi-tiet/bs-ck-ii-nguyen-ba-hiep-65809/tieu-hoa-gan-mat', 'Tiêu hóa', 'Trưởng khoa tiết niệu tại Bệnh viện Thống Nhất, Hồ Chí Minh, Việt Nam', 'Hồ Chí Minh', '/public/images/doctor/60143673bsnguyenbahiep.jpg', 'hơn 30 năm Chuyên khoa Tiết niệu,  Trưởng khoa tiết niệu tại Bệnh viện Thống Nhất, Hồ Chí Minh, Việt Nam', 'ĐH Y Dược TP.HCM'),
@@ -211,15 +246,7 @@ INSERT INTO `doctor` (`md_id`, `md_name`, `links-href`, `md_dept`, `md_clinic`, 
 -- Table structure for table `patient`
 --
 
-CREATE TABLE `patient` (
-  `p_id` int(10) DEFAULT NULL,
-  `p_name` varchar(12) DEFAULT NULL,
-  `p_dob` varchar(8) DEFAULT NULL,
-  `p_desc` varchar(12) DEFAULT NULL,
-  `p_address` varchar(22) DEFAULT NULL,
-  `md_id` varchar(10) DEFAULT NULL,
-  `user_id` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 --
 -- Dumping data for table `patient`
@@ -233,16 +260,6 @@ INSERT INTO `patient` (`p_id`, `p_name`, `p_dob`, `p_desc`, `p_address`, `md_id`
 --
 -- Table structure for table `user`
 --
-
-CREATE TABLE `user` (
-  `firstname` varchar(30) NOT NULL,
-  `lastname` varchar(30) NOT NULL,
-  `username` varchar(30) NOT NULL,
-  `email` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `id` int(255) NOT NULL,
-  `user_type` varchar(256) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
@@ -260,32 +277,7 @@ INSERT INTO `user` (`firstname`, `lastname`, `username`, `email`, `password`, `i
 --
 
 --
--- Indexes for table `appointment`
---
-ALTER TABLE `appointment`
-  ADD PRIMARY KEY (`ap_id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `appointment`
---
-ALTER TABLE `appointment`
-  MODIFY `ap_id` int(10) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+-- Indexes for table `appoint
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

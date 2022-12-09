@@ -17,11 +17,14 @@ if(isset($_POST["login-btn"])){
     $pass = $_POST["password"];
     $s = "select * from user where username = '$name' and password = '$pass'";
     $res = mysqli_query($conn, $s);
-    $num = mysqli_num_rows($res);
-    if($num==1){
+    if(mysqli_num_rows($res)==1){
         $_SESSION['username']=$name;
         $row = mysqli_fetch_assoc($res);
         $_SESSION['user_type']=$row['user_type'];
+        $_SESSION['user_id']=$row['id'];
+        echo $_SESSION['username'];
+        echo $_SESSION['user_type'];
+        echo $_SESSION['user_id'];
         header("Location: ././index.php?page=home");
     }else{
         echo "Incorrect username or password";

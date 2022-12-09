@@ -24,7 +24,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
     <script src="https://kit.fontawesome.com/57448d1974.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="./libs/search.js"></script>
+
 </head>
 
 <body>
@@ -49,7 +49,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             <!-- drop down list -->
             <div class = "search-list-wrap" id=''>
                 <div class="mysearch-list">
-                    <a href=# class="my-list-link" ></a>
+                    
                 </div>
             </div>
 
