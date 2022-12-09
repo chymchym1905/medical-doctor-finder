@@ -74,9 +74,20 @@ if (isset($_GET['page'])) {
     }elseif ($page == 'doctor-profile') {
         include 'views/doctor-profile.php';
     
-        
     } elseif ($page == 'doctor-myprofile') {
         include 'views/doctor-myprofile.php';
+
+    } elseif ($page == 'doctor-myprofile') {
+        include 'views/doctor-myprofile.php';
+
+    } elseif ($page == 'admin-user') {
+        include 'views/admin/user/index.php';
+
+    } elseif ($page == 'admin-edit-user') {
+        include 'views/admin/user/edit.php';
+
+    } elseif ($page == 'admin-create-user') {
+        include 'views/admin/user/create.php';
 
     } else {
         //include 'views/register.php';

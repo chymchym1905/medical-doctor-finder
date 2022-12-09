@@ -35,8 +35,9 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 <body>
 <?php include 'components/header.php'; ?>
-<div class="container-fluid">
+<div class="container-fluid container-bg">
     <div class="row text-center py-5">
+        <h1 style="margin: auto">Doctor's Profile</h1>
         <?php
             $md_id = $_GET['md_id'];
             $result = $database->displayDoctor($md_id); 

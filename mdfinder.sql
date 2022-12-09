@@ -100,7 +100,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `firstname`, `lastname`, `username`, `email`, `password`, `user_type`) VALUES
 (1, 'hieu', 'pham vu', 'pvh', 'pvh11234@gmail.com', '123', 'doctor'),
-(2, 'Châu', 'Hoàng Bảo', 'hbc', 'hbc@gmail.com', '123', 'patient');
+(2, 'Châu', 'Hoàng Bảo', 'hbc', 'hbc@gmail.com', '123', 'patient'),
+(3, 'admin', '01', 'admin01', 'admin01@admin.com', 'admin', 'admin');
 
 --
 -- Indexes for dumped tables

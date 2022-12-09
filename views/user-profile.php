@@ -26,9 +26,9 @@
 <?php include 'components/header.php'; ?>
 <?php
 echo '
-    <div class="container-fluid">
-        <div class="row text-center py-5">
-            <h1>Profile</h1>
+    <div class="container-fluid container-bg">
+        <div class="row">
+            <h1 style="margin: auto">Profile</h1>
         </div>
 
     <div class="container mt-4 mb-4 p-3 d-flex justify-content-center"> 

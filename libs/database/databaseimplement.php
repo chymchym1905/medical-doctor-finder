@@ -50,6 +50,31 @@ class DatabaseClass
         #return $stmt->get_result();
     }
 
+    public function getAllUsers() {
+        $sql = "SELECT * FROM $this->table_name";
+
+        $result = mysqli_query($this->conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        } else{
+            echo 'No result';
+        }
+    }
+
+    public function getUser($id){
+        echo $id;
+        $sql = "SELECT * FROM $this->table_name WHERE md_id = '$id' OR user_id = '$id'";
+
+        $result = mysqli_query($this->conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        } else{
+            echo 'No result';
+        }
+    }
+
     /* // Get filtered Doctorss
     public function getFilteredDoctorss($Doctors_name, $brand, $os, $cpu, $ram, $storage, $min_price, $max_price) {
         $sql = "CALL filterDoctors(?, ?, ?, ?, ?, ?, ?, ?)";

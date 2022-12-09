@@ -35,7 +35,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 <body>
 <?php include 'components/header.php'; ?>
-    <div class="container-fluid">
+    <div class="container-fluid container-bg">
         <div class="row text-center py-5">
             <?php
                 if(empty($_POST["search"])){

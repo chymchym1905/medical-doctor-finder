@@ -1,9 +1,9 @@
 <?php
-//#session_start();
-//require('libs/cards_display.php');
-//require('libs/database/databaseimplement.php');
-//
-//$database = new DatabaseClass(db_name:"mdfinder", table_name:"user");
+#session_start();
+require('libs/cards_display.php');
+require('libs/database/databaseimplement.php');
+
+$database = new DatabaseClass(db_name:"mdfinder", table_name:"user");
 ?>
 
 <!DOCTYPE html>
@@ -50,33 +50,26 @@
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
                     <th scope="col">Role</th>
-                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach($users as $user)
-                echo '<tr class="text-center">
-                    <td>' . $user->user_id . '</td>
+                <?php
+                $result = $database->getAllUsers();
+                while($user = mysqli_fetch_assoc($result)) {
+                    echo '<tr class="text-center">
+                    <td>' . $user['user_id'] . '</td>
                     <td>
-                        <a href="./index.php?page=admin-edit-user">'
-                            . $user->firstname . ' ' . $user->lastname .
+                        <a href="./index.php?page=admin-edit-user&user-id='. $user['id'] .'">'
+                        . $user['firstname'] . ' ' . $user['lastname'] .
                         '</a>
                     </td>
-                    <td>' . $user->username . '</td>
-                    <td>' . $user->email . '</td>
-                    <td>' . $user->role . '</td>
-                    <td>
-                        <div class="col-auto">
-                            <form method="POST" action="./index.php?page=admin-delete-user">
-                                <button class="btn btn-outline-danger btn-sm" type="submit"
-                                        onclick="">
-                                    Delete
-                                </button>
-                            </form>
-                        </div>
-                    </td>
+                    <td>' . $user['username'] . '</td>
+                    <td>' . $user['email'] . '</td>
+                    <td>' . $user['role'] . '</td>
                 </tr>
-                '?>
+                ';
+                }
+                ?>
                 </tbody>
             </table>
         </div>
