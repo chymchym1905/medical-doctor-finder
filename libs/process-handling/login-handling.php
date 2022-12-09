@@ -20,6 +20,8 @@ if(isset($_POST["login-btn"])){
     $num = mysqli_num_rows($res);
     if($num==1){
         $_SESSION['username']=$name;
+        $row = mysqli_fetch_assoc($res);
+        $_SESSION['user_type']=$row['user_type'];
         header("Location: ././index.php?page=home");
     }else{
         echo "Incorrect username or password";

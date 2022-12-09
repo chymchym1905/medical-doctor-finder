@@ -1,6 +1,6 @@
 <?php
 #session_start();
-#require('libs/cards_display.php');
+require('libs/cards_display.php');
 require('libs/database/databaseimplement.php');
 
 $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
@@ -41,15 +41,17 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             $md_id = $_GET['md_id'];
             $result = $database->displayDoctor($md_id); 
             while ($row = mysqli_fetch_assoc($result)){
-            
-            #<!-- Make display look better! -->
-                #echo "<b> $row['md_id'] </b><br>";
-                echo $row['md_name'];
-                echo $row['md_dept'];
-                echo $row['md_photo'];
-                echo $row['md_clinic'];
-                echo $row['md_desc'];
-        }
+                md_profile( $row['md_id'], 
+                            $row['md_name'], 
+                            $row['md_dept'], 
+                            $row['md_photo'], 
+                            $row['md_clinic'], 
+                            $row['md_address'], 
+                            $row['md_desc'], 
+                            $row['md_degree']
+                        );
+                // create a card for each doctor with html
+            }
             #<!-- Make a Book appointment button here -->
         ?>
     </div>

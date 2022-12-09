@@ -65,6 +65,9 @@ if (isset($_GET['page'])) {
     } elseif ($page == 'user-profile') {
         include 'views/user-profile.php';
 
+    } elseif ($page == 'make-appointment') {
+        include 'views/make-appointment.php';
+
     } elseif ($page == 'doctor-profile') {
         include 'views/doctor-profile.php';
         }

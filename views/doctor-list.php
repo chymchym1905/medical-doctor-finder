@@ -35,24 +35,24 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 <body>
 <?php include 'components/header.php'; ?>
-<div class="container-fluid">
-    <div class="row text-center py-5">
-        <?php
-            if(empty($_POST["search"])){
-            $result = $database->getAllDoctors();
-            while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic'], $row['md_desc']);
-                // create a card for each doctor with html
-            }
-            } else{
-            $result = $database->searchData($_POST["search"]);
-            while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic'], $row['md_desc']);
-            }
-            }
-        ?>
-    </div>
-</div> 
+    <div class="container-fluid">
+        <div class="row text-center py-5">
+            <?php
+                if(empty($_POST["search"])){
+                $result = $database->getAllDoctors();
+                while ($row = mysqli_fetch_assoc($result)){
+                    card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic'], $row['md_desc']);
+                    // create a card for each doctor with html
+                }
+                } else{
+                $result = $database->searchData($_POST["search"]);
+                while ($row = mysqli_fetch_assoc($result)){
+                    card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic'], $row['md_desc']);
+                }
+                }
+            ?>
+        </div>
+    </div> 
 <?php include 'components/footer.php'; ?>
 </body>
 </html>
