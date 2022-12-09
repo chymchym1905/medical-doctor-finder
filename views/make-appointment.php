@@ -37,11 +37,11 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 <body>
 <?php include 'components/header.php';
-    if(isset($_GET['md_id'])){
-        $md_id = $_GET['md_id'];
+    if(isset($_SESSION['doctor_id'])){
+        $md_id = $_SESSION['doctor_id'];
     } ?>
 
-        <form action="?page=make-appointment&md_id=1" method="POST">
+        <form action="?page=make-appointment&md_id=<?php$md_id?>" method="POST">
             <h2>Please fill out form to make an appointment with a doctor</h2>               
                 <!-- Doctor's name here -->
             <hr>
@@ -54,7 +54,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             <div class="form-group">
                 <label for="ap_time"><b>Pick a time and date for your appointment</b></label>
                 <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' id="ap_time" name="ap_time" class="form-control" />
+                    <input type='datetime-local' id="ap_date_time" name="ap_date_time" class="form-control" />
                     <div class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                     </div>
