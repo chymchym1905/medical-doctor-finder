@@ -28,7 +28,9 @@ a:link {
     padding-bottom: 0.5rem;
 }
 
-
+.container-bg {
+    background-color: var(--color-3);
+}
 
 .navbar-expand {
     flex-wrap: nowrap;

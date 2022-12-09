@@ -1,3 +1,11 @@
+<?php
+#session_start();
+require('libs/cards_display.php');
+require('libs/database/databaseimplement.php');
+
+$database = new DatabaseClass(db_name:"mdfinder", table_name:"user");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,31 +41,34 @@ if(isset($_GET['error'])){
 <div class="container content-wrap">
     <div class="row">
         <div class="col-md-6">
+            <?php $user_id = $_GET['user-id'];?>
+            <?php  $user = $database->getUser($user_id);?>
+            <?php while ($row = mysqli_fetch_assoc($user)):?>
             <form action="./index.php?page=admin-update-user" method="post" id="form">
                 <h1>Edit User</h1>
                 <hr>
                 <div class="form-group">
                     <label for="firstname"><b>First name</b></label>
-                    <input type="text" value="<?php $user->firstname ?>" name="firstname" id="firstname" class="form-control" required>
+                    <input type="text" value="<?php $user['firstname'] ?>" name="firstname" id="firstname" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="lastname"><b>Last name</b></label>
-                    <input type="text" value="<?php $user->lastname ?>" name="lastname" id="lastname" class="form-control" required>
+                    <input type="text" value="<?php $user['lastname'] ?>" name="lastname" id="lastname" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="username"><b>Username</b></label>
-                    <input type="text" value="<?php $user->username ?>" name="username" id="username" class="form-control" required>
+                    <input type="text" value="<?php $user['username']?>" name="username" id="username" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="email"><b>Email</b></label>
-                    <input type="text" value="<?php $user->email ?>" name="email" id="email" class="form-control" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
+                    <input type="text" value="<?php $user['email'] ?>" name="email" id="email" class="form-control" pattern="[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>
                 </div>
                 <div class="form-group">
                     <label for="usertype"><b>User's type</b></label>
                     <select name="usertype" id="usertype" class="form-control">
-                        <option value="admin" <?php if($user->usertype == 'admin'): ?> selected <?php endif; ?>>Admin</option>
-                        <option value="doctor" <?php if($user->usertype == 'doctor'): ?> selected <?php endif; ?>>Doctor</option>
-                        <option value="patient" <?php if($user->usertype == 'patient'): ?> selected <?php endif; ?>>Patient</option>
+                        <option value="admin" <?php if($user['usertype'] == 'admin'): ?> selected <?php endif; ?>>Admin</option>
+                        <option value="doctor" <?php if($user['usertype'] == 'doctor'): ?> selected <?php endif; ?>>Doctor</option>
+                        <option value="patient" <?php if($user['usertype'] == 'patient'): ?> selected <?php endif; ?>>Patient</option>
                     </select>
                 </div>
 
@@ -69,6 +80,7 @@ if(isset($_GET['error'])){
                     Delete
                 </button>
             </form>
+            <?php endwhile; ?>
         </div>
     </div>
 </div>
