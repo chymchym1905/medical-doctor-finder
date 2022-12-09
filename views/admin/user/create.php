@@ -25,9 +25,7 @@
 </head>
 <body>
 <?php include "components/header.php";
-if(isset($_GET['error'])){
-    echo $_GET['error'];
-}
+
 ?>
 
 <div class="container content-wrap">

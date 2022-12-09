@@ -1,5 +1,6 @@
-<?php if (isset($_SESSION['username'])): ?>
-    <?php if (($_SESSION['user_type']) == 'patient'): ?>
+
+<?php if (isset($_SESSION['user_type'])):?>
+<?php if (($_SESSION['user_type']) == 'patient'): ?>
 
 <!-- Logged in as patient -->
 <div class="header">
@@ -67,7 +68,7 @@
                     </div>
                 </form>
             </div>
-            <?php endif; ?>
+            
 <?php else: ?>
 
 <div class="header">
@@ -102,8 +103,40 @@
                 </form>
             </div>
 
-<?php endif; ?>
-
+            <?php endif; ?> 
+<?php else: ?> 
+    <div class="header">
+    <nav class="navbar fix-top navbar-expand-sm">
+        <div id="header" class="container-fluid">
+            <a class="navbar-brand" href="./index.php">
+                <img src="./assets/img/logo.png" alt="Medical Doctor Finder Logo" width="100" class="d-inline-block align-top">
+            </a>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="./index.php?page=home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.php?page=about" class="nav-link" >About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.php?page=doctors" class="nav-link" >Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.php?page=medical-facilities" class="nav-link">Medical Facilities</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-bar margin-auto">
+                <form action="?page=doctors" method="post">
+                    <div class= "input-icons">
+                        <i class="icon"></i>
+                        <input style="width: 20vw;" type="search" class="search-input"
+                               type="text" placeholder = "Search..." name="search">
+                    </div>
+                </form>
+            </div>
+            <?php endif; ?> 
 
 
 <!-- <div class="header">
