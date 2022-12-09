@@ -21,12 +21,8 @@ if(isset($_POST["login-btn"])){
         $_SESSION['username']=$name;
         $row = mysqli_fetch_assoc($res);
         $_SESSION['user_type']=$row['user_type'];
-        if($_SESSION['user_type']=='admin'){
-            header("Location: ././index.php?page=admin-user");
-        }else{
-            header("Location: ././index.php?page=home");
-        }
-        
+        $_SESSION['user_id']=$row['id'];
+        header("Location: ././index.php?page=home");
     }else{
         echo "Incorrect username or password";
     }

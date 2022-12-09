@@ -26,25 +26,23 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     
     <!-- Datepicker -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker.min.css"> 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.43/css/bootstrap-datetimepicker-standalone.css">
-
     <!-- Google maps -->
     <script src = "https://maps.googleapis.com/maps/api/js"></script>
 
 </head>
 
 <body>
-<?php include 'components/header.php'; ?>
+<?php include 'components/header.php';
+    if(isset($_GET['md_id'])){
+        $md_id = $_GET['md_id'];
+    } ?>
 
-        <form action="?page=./index.php?page=" method="POST">
-            <h2>Please fill out form to make an appointment with</h2>
+        <form action="?page=make-appointment&md_id=1" method="POST">
+            <h2>Please fill out form to make an appointment with a doctor</h2>               
                 <!-- Doctor's name here -->
             <hr>
             <div class="form-group">
@@ -56,8 +54,10 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             <div class="form-group">
                 <label for="ap_time"><b>Pick a time and date for your appointment</b></label>
                 <div class='input-group date' id='datetimepicker1'>
-                    <input type='datetime-local' id="ap_time" name="ap_time" class="form-control" />
-                    
+                    <input type='text' id="ap_time" name="ap_time" class="form-control" />
+                    <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                    </div>
                 </div>
             </div>
 
@@ -65,11 +65,11 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
         </form>
 
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
+        <?php if(isset($_POST['make-app-btn'])){
+            $getPatientID = $database->getPatientID([$_SESSION['user_id']]);
+            $row = mysqli_fetch_assoc($getPatientID);
+            $database->makeAppointment($_POST['ap_desc'], date("Y-m-d H:i:s", strtotime($_POST["ap_date_time"])), $row['p_id'], $md_id);
+        }?>
 
 <?php include 'components/footer.php'; ?>
 </body>
