@@ -40,43 +40,53 @@ if (isset($_GET['page'])) {
 
     if ($page == 'home') {
         include 'views/home.php';
-
-    } elseif ($page == 'login') {
+    }
+    elseif ($page == 'login') {
         include 'views/login.php';
-
-    } elseif ($page == 'login_processing') {
+    }
+    elseif ($page == 'login_processing') {
         include 'libs/process-handling/login-handling.php';
-
-    } elseif ($page == 'register') {
+    }
+    elseif ($page == 'register') {
         include 'views/register.php';
-
-    } elseif ($page == 'register_processing') {
+    }
+    elseif ($page == 'register_processing') {
         include 'libs/process-handling/register-handling.php';
-
-    } elseif ($page == 'about') {
+    }
+    elseif ($page == 'about') {
         include 'views/about.php';
-
-    } elseif ($page == 'doctors') {
+    }
+    elseif ($page == 'doctors') {
         include 'views/doctor-list.php';
-
-    } elseif ($page == 'medical-facilities') {
+    }
+    elseif ($page == 'medical-facilities') {
         include 'views/medical-facilities.php';
-
-    } elseif ($page == 'user-profile') {
+    }
+    elseif ($page == 'user-profile') {
         include 'views/user-profile.php';
-
-    } elseif ($page == 'make-appointment') {
+    }
+    elseif ($page == 'make-appointment') {
         include 'views/make-appointment.php';
-
-    } elseif ($page == 'doctor-profile') {
+    }
+    elseif ($page == 'doctor-profile') {
         include 'views/doctor-profile.php';
-    
-        
-    } elseif ($page == 'doctor-myprofile') {
+    }
+    elseif ($page == 'doctor-myprofile') {
         include 'views/doctor-myprofile.php';
-
-    } else {
-        //include 'views/register.php';
+    }
+    elseif ($page == 'appointment') {
+        include 'views/appointment.php';
+    }
+    elseif ($page == 'admin-user') {
+        include 'views/admin/user/index.php';
+    }
+    elseif ($page == 'admin-create-user') {
+        include 'views/admin/user/create.php';
+    }
+    elseif ($page == 'admin-edit-user') {
+        include 'views/admin/user/edit.php';
+    }
+    else {
         die('Page Not Found!');
     }
 } else {
