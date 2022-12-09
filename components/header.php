@@ -140,7 +140,7 @@
             <?php if (isset($_SESSION['username'])): ?>
                 <div class="dropdown">
                     <button class="btn dropdown-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?php echo $_SESSION['username']; ?>
+                        <?php echo $_SESSION['username'] ."--". $_SESSION['user_type']; ?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="./index.php?page=user-profile">Profile</a></li>

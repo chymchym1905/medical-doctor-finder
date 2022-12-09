@@ -1,5 +1,6 @@
 <?php
     session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -69,7 +70,7 @@ if (isset($_GET['page'])) {
 
     } elseif ($page == 'doctor-profile') {
         include 'views/doctor-profile.php';
-        }
+    }
     
     else {
         //include 'views/register.php';

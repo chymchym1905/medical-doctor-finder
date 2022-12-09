@@ -28,7 +28,7 @@ if(isset($_POST["register-btn"])){
         header("Location: ././index.php?page=register&error=Username already taken");
     }else{
         if(isset($_POST["usertype"])){
-            $reg = "insert into user(username, password, firstname, lastname, email, usertype) 
+            $reg = "insert into user(username, password, firstname, lastname, email, user_type) 
             values ('$name', '$pass', '$firstname', '$lastname', '$email', '$usertype')";
             mysqli_query($conn, $reg);
             header("Location: ././index.php?page=admin-user&message=New user created successfully!");
