@@ -43,7 +43,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 <body>
 <?php include 'components/header.php'; ?>
 
-        <form action="?page=" method="POST">
+        <form action="?page=make-appointment" method="POST">
             <h2>Please fill out form to make an appointment with</h2>
                 <!-- Doctor's name here -->
             <hr>
@@ -56,7 +56,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             <div class="form-group">
                 <label for="ap_time"><b>Pick a time and date for your appointment</b></label>
                 <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' id="ap_time" name="ap_time" class="form-control" />
+                    <input type='text' id="ap_datetime" name="ap_datetime" class="form-control" />
                     <div class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                     </div>

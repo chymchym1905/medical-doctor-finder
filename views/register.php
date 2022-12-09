@@ -33,7 +33,7 @@
 <div class="container content-wrap">
     <div class="row">
         <div class="col-md-6">
-            <form action="?page=register_processing" method="post" id="form">
+            <form action="?page=register-processing" method="post" id="form">
                 <h1>Register</h1>
                 <hr>
                 <div class="form-group">
@@ -64,8 +64,8 @@
                 <div class="form-field">
                     <label for="user_type"><b>Registering as</b></label>
                     <select name ="user_type" class="register-user_type">
-                        <option value="doctor">Doctor</option>
                         <option value="patient">Patient</option>
+                        <option value="doctor">Doctor</option>
                     </select>
                 </div>
 

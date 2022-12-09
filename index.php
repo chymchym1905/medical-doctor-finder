@@ -50,7 +50,7 @@ if (isset($_GET['page'])) {
     } elseif ($page == 'register') {
         include 'views/register.php';
 
-    } elseif ($page == 'register_processing') {
+    } elseif ($page == 'register-processing') {
         include 'libs/process-handling/register-handling.php';
 
     } elseif ($page == 'about') {
@@ -68,7 +68,10 @@ if (isset($_GET['page'])) {
     } elseif ($page == 'make-appointment') {
         include 'views/make-appointment.php';
 
-    } elseif ($page == 'doctor-profile') {
+    } elseif ($page == 'appointment-processing') {
+        include 'libs/process-handling/make-appointment-processing.php';
+
+    }elseif ($page == 'doctor-profile') {
         include 'views/doctor-profile.php';
     
         

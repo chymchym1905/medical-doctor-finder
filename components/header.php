@@ -14,6 +14,9 @@
                         <a href="./index.php?page=home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a href="./index.php?page=doctors" class="nav-link">Browse</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="./index.php?page=patient-myprofile" class="nav-link">My Profile</a>
                     </li>
                     <li class="nav-item">

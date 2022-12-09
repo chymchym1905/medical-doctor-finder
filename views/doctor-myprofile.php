@@ -49,9 +49,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
                             $row['md_desc'], 
                             $row['md_degree']
                         );
-                // create a card for each doctor with html
             }
-            #<!-- Make a Book appointment button here -->
         ?>
     </div>
 </div> 
