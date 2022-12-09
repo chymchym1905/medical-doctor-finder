@@ -57,7 +57,6 @@ if(!isset($_SESSION['user_type'])){
                     <th scope="col">Username</th>
                     <th scope="col">Email</th>
                     <th scope="col">Role</th>
-                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -74,16 +73,7 @@ if(!isset($_SESSION['user_type'])){
                     <td>' . $user['username']. '</td>
                     <td>' . $user['email'] . '</td>
                     <td>' . $user['user_type'] . '</td>
-                    <td>
-                        <div class="col-auto">
-                            <form method="POST" action="./index.php?page=admin-delete-user">
-                                <button class="btn btn-outline-danger btn-sm" type="submit"
-                                        onclick="">
-                                    Delete
-                                </button>
-                            </form>
-                        </div>
-                    </td>
+
                 </tr>
                 '?>
                 </tbody>
