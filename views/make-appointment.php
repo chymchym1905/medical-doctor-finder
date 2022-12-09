@@ -41,7 +41,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
         $md_id = $_SESSION['doctor_id'];
     } ?>
 
-        <form action="?page=make-appointment&md_id=<?php$md_id?>" method="POST">
+        <form action="?page=make-appointment&md_id=<?if(isset($_SESSION['doctor_id'])){$md_id = $_SESSION['doctor_id'];}?>" method="POST">
             <h2>Please fill out form to make an appointment with a doctor</h2>               
                 <!-- Doctor's name here -->
             <hr>
@@ -60,15 +60,12 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
                     </div>
                 </div>
             </div>
-
             <button type="submit" name="make-app-btn" class="btn btn-primary mb-3">Make an appointment</button>
 
         </form>
 
         <?php if(isset($_POST['make-app-btn'])){
-            $getPatientID = $database->getPatientID([$_SESSION['user_id']]);
-            $row = mysqli_fetch_assoc($getPatientID);
-            $database->makeAppointment($_POST['ap_desc'], date("Y-m-d H:i:s", strtotime($_POST["ap_date_time"])), $row['p_id'], $md_id);
+            $database->makeAppointment($_POST['ap_desc'], date("Y-m-d H:i:s", strtotime($_POST["ap_date_time"])), $_SESSION['user_id'], $md_id);
         }?>
 
 <?php include 'components/footer.php'; ?>

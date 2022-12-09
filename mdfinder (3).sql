@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Dec 09, 2022 at 02:34 PM
+-- Generation Time: Dec 09, 2022 at 05:30 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -36,6 +36,26 @@ CREATE TABLE `appointment` (
   `md_id` int(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `appointment`
+--
+
+INSERT INTO `appointment` (`ap_id`, `ap_date_time`, `ap_desc`, `ap_status`, `p_id`, `md_id`) VALUES
+(1, '2022-12-22 11:28:32', 'toi dau bung', 'Pending', 1, 23),
+(2, '2022-12-22 11:28:32', 'toi dau bung', 'Pending', 1, 23),
+(3, '1970-01-01 01:00:00', 'dau bung', 'Pending', 0, 0),
+(4, '2022-12-09 00:50:00', 'dau bung', 'Pending', 0, 0),
+(5, '2022-12-15 02:57:00', 'dau bung', 'Pending', 1, 84),
+(6, '2022-12-22 23:39:00', 'tieu chay', 'Pending', 1, 1),
+(7, '2022-12-23 15:03:00', 'cot song', 'Pending', 1, 11),
+(8, '2022-07-02 16:07:00', 'aweasdsfdsg', 'Pending', 1, 85),
+(9, '2022-12-09 15:07:00', 'dgfhfgjd', 'Pending', 1, 85),
+(10, '2022-12-09 15:07:00', 'dgfhfgjd', 'Pending', 2, 85),
+(11, '2022-12-18 15:28:00', 'de con', 'Pending', 0, 92),
+(12, '2022-12-18 15:28:00', 'de con', 'Pending', 5, 92),
+(13, '2022-12-18 15:28:00', 'de con', 'Pending', 5, 92),
+(14, '2022-12-31 16:32:00', 'rang', 'Pending', 5, 85);
+
 -- --------------------------------------------------------
 
 --
@@ -59,7 +79,6 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`md_id`, `md_name`, `md_dept`, `md_clinic`, `md_address`, `md_photo`, `md_desc`, `md_degree`, `user_id`) VALUES
-(0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
 (1, 'Bác sĩ Nguyễn Bá Thông', 'Chẩn đoán hình ảnh', 'Bệnh Viện đa khoa quốc tế Nam Sài Gòn', 'Hồ Chí Minh', 'public/images/doctor/drnguyenbathong.jpg', 'CHuyên khoa chuẩn đoán hình ảnh tại Bệnh Viện đa khoa quốc tế Nam Sài Gòn', 'Học Viện Quân Y', NULL),
 (2, 'Bác sĩ NGUYỄN DUY PHƯƠNG', 'Chấn thương chỉnh hình - Cột sống', 'Bệnh viện quận Bình Thạnh', 'Hồ Chí Minh', 'public/images/doctor/285188303bsnguyenduyphuong.jpg', '10 năm Chuyên khoa chuyên khoa ngoại chấn thương chỉnh hình', 'ĐH Y Dược TP.HCM', NULL),
 (3, 'Bác sĩ  Quế Dậu', 'Chấn thương chỉnh hình - Cột sống', 'Bệnh Viên Sai Sòn-ITO', 'Hồ Chí Minh', 'public/images/doctor/bsquedau1.jpg', '10 năm Chuyên khoa chấn thương chỉnh hình', 'ĐH Y Dược TP.HCM', NULL),
@@ -226,8 +245,9 @@ CREATE TABLE `patient` (
 --
 
 INSERT INTO `patient` (`id`, `p_name`, `p_dob`, `p_desc`, `p_address`, `user_id`) VALUES
-(0, 'asd', NULL, 'asd', 'asdasd', 1),
-(1, 'asd', NULL, 'asd232', 'asdasdwqre', 2);
+(1, 'asd', NULL, 'asd', 'asdasd', 5),
+(2, 'kien.dauoofm', NULL, NULL, NULL, 1),
+(3, 'wer', NULL, NULL, NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -255,7 +275,8 @@ INSERT INTO `user` (`id`, `firstname`, `lastname`, `username`, `email`, `passwor
 (3, '3454', '1sad', 'wer', 'captainjack981@gmail.com', '123', 'patient'),
 (4, 'Dau', 'Gia', 'rdt', 'captainjack981@gmail.com', '123', 'doctor'),
 (5, 'Dau', 'Gia', 'asd', 'captainjack981@gmail.com', '123', 'patient'),
-(7, 'wert', 'hgdfh', 'zxc', 'captainjack981@gmail.com', '123', 'doctor');
+(7, 'wert', 'hgdfh', 'zxc', 'captainjack981@gmail.com', '123', 'doctor'),
+(8, 'href', 'value', 'ert', 'asd@asd.n', '123', '');
 
 --
 -- Indexes for dumped tables
@@ -291,10 +312,28 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `appointment`
+--
+ALTER TABLE `appointment`
+  MODIFY `ap_id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `doctor`
+--
+ALTER TABLE `doctor`
+  MODIFY `md_id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+
+--
+-- AUTO_INCREMENT for table `patient`
+--
+ALTER TABLE `patient`
+  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -138,9 +138,10 @@ class DatabaseClass
 
     public function getPatientID($user_id){
         $sql = "SELECT * FROM user 
-                    INNER JOIN patient ON user.id = patient.user_id";
+                    INNER JOIN patient WHERE user.id = patient.user_id";
 
         $result = mysqli_query($this->conn, $sql);
+        $row = mysqli_fetch_assoc($result);
         if(mysqli_num_rows($result) > 0){
             return $result;
         } else{
