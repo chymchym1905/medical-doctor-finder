@@ -86,6 +86,9 @@ if (isset($_GET['page'])) {
     elseif ($page == 'appointment') {
         include 'views/admin/appointment/index.php';
     }
+    elseif ($page == 'admin-edit-appointment') {
+        include 'views/admin/appointment/edit.php';
+    }
     elseif ($page == 'admin-user') {
         include 'views/admin/user/index.php';
     }

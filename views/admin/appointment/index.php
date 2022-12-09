@@ -1,9 +1,16 @@
 <?php
-//#session_start();
-//require('libs/cards_display.php');
-//require('libs/database/databaseimplement.php');
-//
-//$database = new DatabaseClass(db_name:"mdfinder", table_name:"user");
+#session_start();
+require('libs/cards_display.php');
+require('libs/database/databaseimplement.php');
+
+$database = new DatabaseClass(db_name:"mdfinder", table_name:"appointment");
+if(!isset($_SESSION['user_type'])){
+    header('location: ././index.php?page=login');
+}else{
+    if($_SESSION['user_type']!="admin"){
+        header('location: ././index.php?page=home&error=Your account does not have this permission');
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,11 +36,11 @@
 
 <body>
 <?php include "components/header.php"; ?>
-
+<h1>Appointments</h1>
 <div class="container-fluid">
     <div class="row">
         <div class="col-2">
-            <a class="btn btn-primary" type="button" href="./index.php?page=admin-create-appointment">
+            <a class="btn btn-primary" type="button" href="./index.php?page=doctors">
                 New
             </a>
         </div>
@@ -45,30 +52,49 @@
             <table class="table table-responsive-sm">
                 <thead>
                 <tr class="text-center">
-                    <th scope="col">Appointment</th>
-                    <th>Delete</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Patient ID</th>
+                    <th scope="col">Doctor ID</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Status</th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php foreach($appointments as $appointment)
-                    echo '<tr class="text-center">
-                    <td>
-                        <a href="./index.php?page=admin-edit-appointment">'
-                        . $appointment->id .
-                        '</a>
-                    </td>
-                    <td>
-                        <div class="col-auto">
-                            <form method="POST" action="./index.php?page=admin-delete-appointment">
-                                <button class="btn btn-outline-danger btn-sm" type="submit"
-                                        onclick="">
-                                    Delete
-                                </button>
-                            </form>
-                        </div>
-                    </td>
-                </tr>
-                '?>
+                <?php
+                $result = $database->getAllAppointments();
+                while ($ap = mysqli_fetch_assoc($result)) {
+                echo '
+                    <tr class="text-center">
+                        <td>
+                            <a href="./index.php?page=admin-edit-appointment&appointment-id='. $ap['ap_id'] .'">'
+                            . $ap['ap_id'] .
+                            '</a>
+                        </td>
+                        <td>
+                            <a href="./index.php?page=#">'
+                            . $ap['p_id'] .
+                            '</a>
+                        </td>
+                        <td>
+                            <a href="./index.php?page=#">'
+                            . $ap['md_id'] .
+                            '</a>
+                        </td>
+                        <td>'
+                            . $ap['ap_date_time'] .
+                        '</td>
+                        <td>'
+                            . $ap['ap_desc'] .
+                        '</td>
+
+                        <td>'
+                            . $ap['ap_status'] .
+                        '</td>
+                    </tr>
+                ';
+                }
+                ?>
                 </tbody>
             </table>
         </div>

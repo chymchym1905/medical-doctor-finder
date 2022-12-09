@@ -72,8 +72,8 @@
                 </div>
 
                 <div class="form-field">
-                    <label for="usertype"><b>Registering as</b></label>
-                    <select name ="usertype" class="register-user_type">
+                    <label for="user_type"><b>Registering as</b></label>
+                    <select name ="user_type" class="register-user_type">
                         <option value="doctor">Doctor</option>
                         <option value="patient">Patient</option>
                     </select>
