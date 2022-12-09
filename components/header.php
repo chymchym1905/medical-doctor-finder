@@ -1,5 +1,5 @@
-<?php if (isset($_SESSION['username'])): ?>
-    <?php if (($_SESSION['user_type']) == 'patient'): ?>
+<?php if (isset($_SESSION['username'])){
+    if (($_SESSION['user_type']) == 'patient') { ?>
 
 <!-- Logged in as patient -->
 <div class="header">
@@ -12,6 +12,9 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="./index.php?page=home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./index.php?page=doctors" class="nav-link">Browse</a>
                     </li>
                     <li class="nav-item">
                         <a href="./index.php?page=patient-myprofile" class="nav-link">My Profile</a>
@@ -34,7 +37,7 @@
                 </form>
             </div>
 
-<?php elseif (($_SESSION['user_type']) == 'doctor'): ?>
+<?php } elseif (($_SESSION['user_type']) == 'doctor') {?>
 
 <div class="header">
     <nav class="navbar fix-top navbar-expand-sm">
@@ -67,8 +70,8 @@
                     </div>
                 </form>
             </div>
-            <?php endif; ?>
-<?php else: ?>
+
+<?php }} else { ?>
 
 <div class="header">
     <nav class="navbar fix-top navbar-expand-sm">
@@ -102,8 +105,7 @@
                 </form>
             </div>
 
-
-<?php endif; ?>
+<?php }?>
 
 
 <!-- <div class="header">
@@ -141,11 +143,15 @@
             <?php if (isset($_SESSION['username'])): ?>
                 <div class="dropdown">
                     <button class="btn dropdown-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        <?php echo $_SESSION['username'] ."--". $_SESSION['user_type']; ?>
+                        <?php echo $_SESSION['username']; ?>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <li><a class="dropdown-item" href="./index.php?page=user-profile">Profile</a></li>
-                        <li><a class="dropdown-item" href="./index.php?page=admin-user">User</a></li>
+
+                        <?php //if ($_SESSION['user_type'] == 'admin'): ?>
+                            <li><a class="dropdown-item" href="./index.php?page=admin-user">User</a></li>
+                        <?php //endif; ?>
+
                         <li><a class="dropdown-item" href="./index.php?page=appointment">Appointment</a></li>
                         <li><a class="dropdown-item" href="./views/logout.php" onclick="return session_unset()" style="color: red">Logout</a></li>
                     </ul>

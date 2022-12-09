@@ -124,15 +124,29 @@ class DatabaseClass
         }
     }
 
-    public function makeAppointment($ap_desc, $ap_datetime, $p_id, $md_id){
-        $sql = "INSERT INTO appointment (ap_date, ap_time, p_id, md_id)
-                VALUES '$ap_desc', '$ap_datetime', '$p_id', '$md_id'";
+    public function makeAppointment($ap_desc, $ap_date_time, $p_id, $md_id){
+        $ap_status = 'Pending';
+        $sql = "INSERT INTO appointment (ap_desc, ap_date_time, p_id, md_id, ap_status)
+                VALUES                  '$ap_desc', $ap_date_time, '$p_id', '$md_id', '$ap_status'";
+        mysqli_query($this->conn, $sql);
+        /* if (mysqli_query($this->conn, $sql)!== null)  {
+             return "Appointment created successfully";
+           } else {
+             echo "Error: " . $sql . "<br>" . $conn->error;
+           } */
+    }
 
-        if (mysqli_query($this->conn, $sql) == TRUE) {
-            echo "New record created successfully";
-          } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-          }
+    public function getPatientID($user_id){
+        $sql = "SELECT * FROM user 
+                    INNER JOIN patient ON user.id = patient.user_id";
+
+        $result = mysqli_query($this->conn, $sql);
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        } else{
+            echo 'No result';
+        }
+        
     }
 
     public function getAppointments() {
