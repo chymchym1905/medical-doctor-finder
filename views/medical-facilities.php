@@ -29,7 +29,7 @@
 
 <body>
     <?php include 'components/header.php'; ?>
-    <div class="container-fluid">
+    <div class="container-fluid container-bg">
         <div class="row text-center py-5">
             <h1>Medical Facilities</h1>
             <div id="maps" style="width: 100%; height: 700px;"></div>

@@ -10,15 +10,13 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Doctor List</title>
+    <title>Doctor Profile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/login.css">
-    <link rel="stylesheet" href="./assets/css/register.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/utilities.css">
     <link rel="stylesheet" href="./assets/css/utils.css">
@@ -35,8 +33,9 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 <body>
 <?php include 'components/header.php'; ?>
-<div class="container-fluid">
+<div class="container-fluid container-bg">
     <div class="row text-center py-5">
+        <h1 style="margin: auto">Doctor's Profile</h1>
         <?php
             $md_id = $_GET['md_id'];
             $result = $database->displayDoctor($md_id); 

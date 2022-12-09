@@ -58,7 +58,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 
     </div>
-    <div class = "container-fluid search-filter" style="background-color: var(--color-3)">
+    <div class = "container-fluid container-bg search-filter" style="background-color: var(--color-3)">
         <div class = "search-filter-header">
             <h2>Search by doctor department</h2>
             <br>
@@ -137,7 +137,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
                 </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid container-bg">
     <div class="row text-center py-5">
         <?php
             if(isset($_POST["filter"])){
