@@ -49,7 +49,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             <hr>
             <div class="form-group">
                 <label for="ap_desc"><b>A brief description of your symtoms</b></label>
-                <input type="text" class="form-control" id="ap_desc" name="ap_desc" placeholder="Enter description">
+                <input type="text" class="form-control submissionfield" id="ap_desc" name="ap_desc" placeholder="Enter description">
 
             </div>
 

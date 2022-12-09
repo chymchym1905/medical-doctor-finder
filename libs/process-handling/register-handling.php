@@ -18,10 +18,8 @@ if(isset($_POST["register-btn"])){
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
     $email = $_POST["email"];
+    $usertype = $_POST["usertype"];
 
-    if(isset($_POST["user_type"])){
-        $user_type = $_POST["user_type"];
-    }
 
     $s = "select * from user where username = '$username'";
     $res = mysqli_query($conn, $s);

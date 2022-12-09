@@ -18,7 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Google maps -->
-    <script src = "https://maps.googleapis.com/maps/api/js"></script>
+
 
     <script defer src = "assets/js/authen.js"></script>
 
@@ -36,6 +36,16 @@
             <form action="?page=register_processing" method="post" id="form">
                 <h1>Register</h1>
                 <hr>
+
+                <div class="form-group"> 
+                    <label for="usertype"><b>You are</b></label>
+                    <select name ="usertype">
+                        <option value="doctor" >Doctor</option>
+                        <option value="patient" >Patient</option>
+                    </select>
+                             
+                </div>
+                <br>  
                 <div class="form-group">
                     <label for="firstname"><b>First name</b></label>
                     <input type="text" placeholder="Enter First name" name="firstname" id="firstname" class="form-control" required>
