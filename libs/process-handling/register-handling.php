@@ -40,7 +40,9 @@ if(isset($_POST["register-btn"])){
                                     FROM user WHERE username = '$username'";
                 mysqli_query($conn, $insert_doc_sql);
             } elseif ($user_type == 'patient'){
-                $patient_sql ="";
+                $patient_sql ="INSERT INTO patient (user_id) 
+                                SELECT id
+                                FROM user WHERE username = '$username'";
             }
             header("Location: ././index.php?page=login&message=New user created successfully!");
         }else {
