@@ -30,8 +30,7 @@ function md_profile($md_id, $md_name, $md_dept, $md_photo, $md_clinic, $md_addre
                     <a href=\"?page=make-appointment&md_id=$md_id\" class=\"btn btn-primary\">Make an Appointment</a>
                 </div>
             </div>
-        </div>
-    ";
+        </div>";
     echo $element;
 }
 

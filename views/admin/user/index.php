@@ -4,6 +4,13 @@ require('libs/cards_display.php');
 require('libs/database/databaseimplement.php');
 
 $database = new DatabaseClass(db_name:"mdfinder", table_name:"user");
+if(!isset($_SESSION['user_type'])){
+    header('location: ././index.php?page=login');
+}else{
+    if($_SESSION['user_type']!="admin"){
+        header('location: ././index.php?page=home&error=Your account does not have this permission');
+    }
+}
 ?>
 
 <!DOCTYPE html>

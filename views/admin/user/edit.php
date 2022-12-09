@@ -33,9 +33,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"user");
 </head>
 <body>
 <?php include "components/header.php";
-if(isset($_GET['error'])){
-    echo $_GET['error'];
-}
+
 ?>
 
 <div class="container content-wrap">
@@ -43,10 +41,10 @@ if(isset($_GET['error'])){
         <div class="col-md-6">
             <?php $user_id = $_GET['user-id'];?>
             <?php  $user = $database->getUser($user_id);?>
-            <?php while ($row = mysqli_fetch_assoc($user)):?>
+            <?php $row = mysqli_fetch_assoc($user);?>
             <form action="./index.php?page=admin-update-user" method="post" id="form">
                 <h1>Edit User</h1>
-                <hr>
+
                 <div class="form-group">
                     <label for="firstname"><b>First name</b></label>
                     <input type="text" value="<?php $user['firstname'] ?>" name="firstname" id="firstname" class="form-control" required>
@@ -80,7 +78,7 @@ if(isset($_GET['error'])){
                     Delete
                 </button>
             </form>
-            <?php endwhile; ?>
+
         </div>
     </div>
 </div>

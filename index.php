@@ -1,6 +1,15 @@
 <?php
     session_start();
-
+    if(isset($_GET['error'])){
+        echo "<p style = 'z-index: 100'>" .$_GET['error']."</p>"  ;
+    }
+    // if(isset($_SESSION['user_type'])){
+    //     if($_SESSION['user_type']=='admin'){
+    //         header("location: ?page=admin-user");
+    //     }elseif($_SESSION['user_type']=='doctor'){
+    //         header('location: ?page=appointment');
+    //     }
+    // }
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +84,7 @@ if (isset($_GET['page'])) {
         include 'views/doctor-myprofile.php';
     }
     elseif ($page == 'appointment') {
-        include 'views/appointment.php';
+        include 'views/admin/appointment/index.php';
     }
     elseif ($page == 'admin-user') {
         include 'views/admin/user/index.php';
@@ -92,6 +101,8 @@ if (isset($_GET['page'])) {
 } else {
     include 'views/home.php';
 }
+
+
 ?>
 
 </body>
