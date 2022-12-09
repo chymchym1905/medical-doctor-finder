@@ -40,21 +40,39 @@ if (isset($_GET['page'])) {
 
     if ($page == 'home') {
         include 'views/home.php';
+
     } elseif ($page == 'login') {
         include 'views/login.php';
+
     } elseif ($page == 'login_processing') {
         include 'libs/process-handling/login-handling.php';
+
     } elseif ($page == 'register') {
         include 'views/register.php';
+
     } elseif ($page == 'register_processing') {
         include 'libs/process-handling/register-handling.php';
+
     } elseif ($page == 'about') {
         include 'views/about.php';
+
     } elseif ($page == 'doctors') {
         include 'views/doctor-list.php';
+
     } elseif ($page == 'medical-facilities') {
         include 'views/medical-facilities.php';
-    } else {
+
+    } elseif ($page == 'user-profile') {
+        include 'views/user-profile.php';
+
+    } elseif ($page == 'make-appointment') {
+        include 'views/make-appointment.php';
+
+    } elseif ($page == 'doctor-profile') {
+        include 'views/doctor-profile.php';
+        }
+    
+    else {
         //include 'views/register.php';
         die('Page Not Found!');
     }

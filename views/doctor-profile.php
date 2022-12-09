@@ -1,13 +1,22 @@
+<?php
+#session_start();
+require('libs/cards_display.php');
+require('libs/database/databaseimplement.php');
+
+$database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Profile</title>
+    <title>Doctor List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font -->
 
     <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/css/register.css">
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -26,17 +35,27 @@
 
 <body>
 <?php include 'components/header.php'; ?>
-
-    <div class="container-fluid">
-        <div class="row text-center py-5">
-            <h1>Profile</h1>
-        </div>
+<div class="container-fluid">
+    <div class="row text-center py-5">
+        <?php
+            $md_id = $_GET['md_id'];
+            $result = $database->displayDoctor($md_id); 
+            while ($row = mysqli_fetch_assoc($result)){
+                md_profile( $row['md_id'], 
+                            $row['md_name'], 
+                            $row['md_dept'], 
+                            $row['md_photo'], 
+                            $row['md_clinic'], 
+                            $row['md_address'], 
+                            $row['md_desc'], 
+                            $row['md_degree']
+                        );
+                // create a card for each doctor with html
+            }
+            #<!-- Make a Book appointment button here -->
+        ?>
     </div>
-
-
-
-
-
+</div> 
 <?php include 'components/footer.php'; ?>
 </body>
 </html>

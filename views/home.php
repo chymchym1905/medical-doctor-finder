@@ -58,7 +58,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
 
 
     </div>
-    <div class = "container-fluid search-filter bg">
+    <div class = "container-fluid search-filter" style="background-color: var(--color-3)">
         <div class = "search-filter-header">
             <h2>Search by doctor department</h2>
             <br>
@@ -143,7 +143,7 @@ $database = new DatabaseClass(db_name:"mdfinder", table_name:"doctor");
             if(isset($_POST["filter"])){
             $result = $database->searchData($_POST["speciality"]);
             while ($row = mysqli_fetch_assoc($result)){
-                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_photo'], $row['md_clinic']);
+                card($row['md_id'], $row['md_name'], $row['md_dept'], $row['md_desc'], $row['md_photo'], $row['md_clinic']);
             }
             }
         ?>

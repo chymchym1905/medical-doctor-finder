@@ -32,7 +32,7 @@ class DatabaseClass
         }
     }
 
-    // Get all Doctorss
+    // Get all Doctors
     public function getAllDoctors() {
         $sql = "SELECT * FROM $this->table_name";
 
@@ -40,28 +40,31 @@ class DatabaseClass
 
         if(mysqli_num_rows($result) > 0){
             return $result;
+        } else{
+            echo 'No result';
         }
+    
 
         #$stmt = $this->conn->prepare($sql);
         #$stmt->execute();
         #return $stmt->get_result();
     }
 
-    // Get filtered Doctorss
+    /* // Get filtered Doctorss
     public function getFilteredDoctorss($Doctors_name, $brand, $os, $cpu, $ram, $storage, $min_price, $max_price) {
         $sql = "CALL filterDoctors(?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
         $stmt->bind_param("ssssssii", $Doctors_name, $brand, $os, $cpu, $ram, $storage, $min_price, $max_price);
         $stmt->execute();
         return $stmt->get_result();
-    }
+    } */
 
     public function conn_next() {
         $this->conn->next_result();
     }
 
     public function filterData($crit){
-        $sql = "SELECT * FROM $this->table_name WHERE md_dept = '%$crit1%'";
+        $sql = "SELECT * FROM $this->table_name WHERE md_dept = '%$crit%'";
 
         $result = mysqli_query($this->conn, $sql);
 
@@ -74,6 +77,18 @@ class DatabaseClass
 
     public function searchData($keyword){
         $sql = "SELECT * FROM $this->table_name WHERE md_name LIKE '%$keyword%' OR md_desc LIKE '%$keyword%' OR md_dept LIKE '%$keyword%'";
+
+        $result = mysqli_query($this->conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        } else{
+            echo 'No result';
+        }
+    }
+
+    public function displayDoctor($id){
+        $sql = "SELECT * FROM $this->table_name WHERE md_id = '$id'";
 
         $result = mysqli_query($this->conn, $sql);
 
