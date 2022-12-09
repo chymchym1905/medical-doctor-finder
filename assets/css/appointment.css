@@ -114,3 +114,10 @@ label.light {
 form {
     max-width: 480px;
 }
+
+.submissionfield { 
+    width: 90px; 
+    height: 390px; 
+    border: 1px solid #999999; 
+    padding: 5px; 
+}

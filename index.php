@@ -28,7 +28,6 @@
 
     <!-- Google maps -->
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
 
 </head>
 
