@@ -18,7 +18,7 @@ if(isset($_POST["register-btn"])){
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
     $email = $_POST["email"];
-    $usertype = $_POST["usertype"];
+    $user_type = $_POST["user_type"];
 
 
     $s = "select * from user where username = '$username'";
